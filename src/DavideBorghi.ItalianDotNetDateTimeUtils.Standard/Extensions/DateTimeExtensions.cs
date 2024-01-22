@@ -5,6 +5,19 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
 {
     public static class DateTimeExtensions
     {
+        #region Equals
+
+        /// <summary>
+        /// Tells if two dates are equal by their Date property.
+        /// </summary>
+        /// <param name="firstDate">The first date to compare.</param>
+        /// <param name="secondDate">The second date to compare.</param>
+        /// <returns>True if the two values are equal; otherwise, false.</returns>
+        public static bool EqualsByDate(this DateTime firstDate, DateTime secondDate)
+            => firstDate.Date == secondDate.Date;
+
+        #endregion
+
         #region Day
 
         /// <summary>
