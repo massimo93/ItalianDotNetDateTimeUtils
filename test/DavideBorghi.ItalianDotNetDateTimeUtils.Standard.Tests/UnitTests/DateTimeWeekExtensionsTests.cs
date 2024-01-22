@@ -1,6 +1,4 @@
-﻿using Xunit;
-
-namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.UnitTests
+﻿namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.UnitTests
 {
     public sealed class DateTimeWeekExtensionsTests
     {

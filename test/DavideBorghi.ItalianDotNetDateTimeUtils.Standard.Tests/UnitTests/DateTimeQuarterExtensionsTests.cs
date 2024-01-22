@@ -1,5 +1,4 @@
 ﻿using DavideBorghi.ItalianDotNetDateTimeUtils.Standard.DateTimeEnums;
-using Xunit;
 
 namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.UnitTests
 {
