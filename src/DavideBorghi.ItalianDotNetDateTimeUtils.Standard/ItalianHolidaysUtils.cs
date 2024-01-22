@@ -6,6 +6,14 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
 {
     public class ItalianHolidaysUtils
     {
+        #region Constants
+
+        private const int EasterMondayDaysCountFromEaster = 1;
+        private const int AscensionOfJesusDaysCountFromEaster = 40;
+        private const int FeastOfCorpusChristiDaysCountAfterEaster = 60;
+
+        #endregion
+        
         #region Public Fields
 
         /// <summary>
@@ -21,7 +29,7 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
         /// Tells if a particular date is an Italian (national or local) holiday or not.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
-        /// <returns>A boolean value representing whether the given date is an Italian (national or local) holiday or not.</returns>
+        /// <returns>True if the given date is an Italian (national or local) holiday; otherwise, false.</returns>
         public static bool IsHoliday(DateTime date)
         {
             if (date.Year < 1946)
@@ -36,8 +44,10 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
                 || date.IsAnniversaryOfTheUnificationOfItalyDayOfficiallyCelebrated()
                 || date.IsSaintJosephsDay()
                 || date.EqualsByDate(yearlyEaster)
-                || date.EqualsByDate(yearlyEaster.AddDays(1))
-                || (date.Year < 1977 && (date.EqualsByDate(yearlyEaster.AddDays(40)) || date.EqualsByDate(yearlyEaster.AddDays(60))))
+                || date.EqualsByDate(yearlyEaster.AddDays(EasterMondayDaysCountFromEaster))
+                || (date.Year < 1977 
+                    && (date.EqualsByDate(yearlyEaster.AddDays(AscensionOfJesusDaysCountFromEaster)) 
+                        || date.EqualsByDate(yearlyEaster.AddDays(FeastOfCorpusChristiDaysCountAfterEaster))))
                 || date.IsItalianLiberationDay()
                 || date.IsWorkersDay()
                 || date.IsItalianRepublicDay()
@@ -52,10 +62,10 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
         }
 
         /// <summary>
-        /// Gets the date time of Easter Sunday given the year.
+        /// Gets the DateTime of Easter Sunday given the year.
         /// </summary>
         /// <param name="year">An integer value representing the year.</param>
-        /// <returns>The date time representing the Easter Sunday.</returns>
+        /// <returns>The DateTime representing of Easter Sunday.</returns>
         public static DateTime GetYearlyEaster(int year)
         {
             int num = year % 19;
@@ -81,12 +91,12 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
             => GetItalianHolidaysInRange(new DateTime(year, 1, 1) , new DateTime(year, 12, 31));
 
         /// <summary>
-        /// 
+        /// Gets a DateTime list of Italian holidays between given dates.
         /// </summary>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
+        /// <param name="startDate">The start date.</param>
+        /// <param name="endDate">The end date.</param>
         /// <returns></returns>
-        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="ArgumentException">Thrown when provided start date is bigger then given end date.</exception>
         public static IEnumerable<DateTime> GetItalianHolidaysInRange(DateTime startDate, DateTime endDate)
         {
             if (startDate > endDate)

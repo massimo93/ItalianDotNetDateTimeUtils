@@ -17,15 +17,25 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
         #region Public Methods
 
         /// <summary>
-        /// Gets the number of office days between two given dates, removing weekends and Italian national and local holidays.
+        /// Gets the number of Italian office days between two given dates, removing weekends and Italian national and local holidays.
         /// </summary>
-        /// <param name="startDate">The starting date./param>
-        /// <param name="endDate">The ending date.</param>
+        /// <param name="startDate">The start date./param>
+        /// <param name="endDate">The end date.</param>
         /// <returns>The number of Italian office days between two dates.</returns>
-        /// <exception cref="System.ArgumentException">Thrown when provided starting date is bigger then given ending date.</exception>
+        /// <exception cref="ArgumentException">Thrown when provided start date is bigger then given end date.</exception>
         public static int HowManyItalianOfficeDaysBetweenDates(DateTime startDate, DateTime endDate)
             => HowManyItalianWorkDaysBetweenDates(startDate, endDate, ExcludeWeekendsCondition);
 
+        /// <summary>
+        /// Gets the number of Italian work days between two given dates, keeping those that match a given condition 
+        /// but still removing Italian both national and local holidays.
+        /// and keeping the 
+        /// </summary>
+        /// <param name="startDate">The start date./param>
+        /// <param name="endDate">The end date.</param>
+        /// <paramref name="workingDayCondition">Condition to consider matching dates as work days.</param>
+        /// <returns>The number of Italian calculated work days.</returns>
+        /// <exception cref="ArgumentException">Thrown when provided start date is bigger then given end date.</exception>
         public static int HowManyItalianWorkDaysBetweenDates(DateTime startDate, DateTime endDate, Func<DateTime, bool> workingDayCondition)
         {
             if (startDate > endDate)
