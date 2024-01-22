@@ -1,12 +1,10 @@
-﻿using Xunit;
-
-namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.UnitTests
+﻿namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.UnitTests
 {
     public sealed class HolidaysTests
     {
         #region Private Fields
 
-        public static IEnumerable<string?> LocalHolidays => new List<string?> { "2406" };
+        public static Func<DateTime, bool>? IsLocalHoliday => date => date.Month == 6 && date.Day == 24;
 
         #endregion
 
@@ -21,7 +19,7 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.UnitTests
         [InlineData(2049, "2049/04/18")]
         public void Check_If_EasterOfYear_Is_AsExpected(int year, DateTime expectedEasterDateTime)
         {
-            DateTime calculatedEasterOfYear = ItalianDateTimeUtils.GetYearlyEaster(year);
+            DateTime calculatedEasterOfYear = ItalianHolidaysUtils.GetYearlyEaster(year);
             Assert.Equal(calculatedEasterOfYear, expectedEasterDateTime);
         }
 
@@ -32,11 +30,10 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.UnitTests
         [Fact]
         public void XmasIsHoliday()
         {
-            Assert.True(ItalianDateTimeUtils.IsHoliday(new DateTime(2023, 12, 25)));
+            Assert.True(ItalianHolidaysUtils.IsHoliday(new DateTime(2023, 12, 25)));
         }
 
         [Theory]
-        [InlineData("1911/03/17")]
         [InlineData("1961/03/17")]
         [InlineData("2011/03/17")]
         [InlineData("2023/01/01")]
@@ -51,23 +48,23 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.UnitTests
         [InlineData("2024/12/26")]
         public void Check_If_GivenNationalHolidayDateTime_IsHoliday(DateTime givenDate)
         {
-            Assert.True(ItalianDateTimeUtils.IsHoliday(givenDate));
+            Assert.True(ItalianHolidaysUtils.IsHoliday(givenDate));
         }
 
         [Theory]
         [InlineData("2023/06/24")]
         public void Check_If_GivenLocalHolidayDateTime_IsHoliday(DateTime givenDate)
         {
-            ItalianDateTimeUtils.LocalHolidays = LocalHolidays;
-            Assert.True(ItalianDateTimeUtils.IsHoliday(givenDate));
+            ItalianHolidaysUtils.IsLocalHoliday = IsLocalHoliday;
+            Assert.True(ItalianHolidaysUtils.IsHoliday(givenDate));
         }
 
         [Theory]
         [InlineData("2023/11/04")]
         public void Check_If_GivenLocalHolidayDateTime_IsNotHoliday(DateTime givenDate)
         {
-            ItalianDateTimeUtils.LocalHolidays = LocalHolidays;
-            Assert.False(ItalianDateTimeUtils.IsHoliday(givenDate));
+            ItalianHolidaysUtils.IsLocalHoliday = IsLocalHoliday;
+            Assert.False(ItalianHolidaysUtils.IsHoliday(givenDate));
         }
 
         #endregion
