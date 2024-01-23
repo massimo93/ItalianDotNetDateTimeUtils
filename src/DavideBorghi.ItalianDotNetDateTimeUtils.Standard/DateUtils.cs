@@ -30,7 +30,8 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
         /// <exception cref="ArgumentException">Thrown when provided starting date is after given ending date.</exception>
         public static int[] GetYearsBetweenDates(DateTime startDate, DateTime endDate)
         {
-            if (startDate > endDate) {
+            if (startDate > endDate)
+            {
                 throw new ArgumentException($"{nameof(startDate)} cannot be after {nameof(endDate)}");
             }
 
