@@ -1,6 +1,6 @@
 ﻿namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.UnitTests;
 
-public class NationalHolidaysExtensionsTests
+public sealed class NationalHolidaysExtensionsTests
 {
     #region January's
 
