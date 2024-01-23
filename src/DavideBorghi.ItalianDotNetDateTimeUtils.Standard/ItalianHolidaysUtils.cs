@@ -104,13 +104,13 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
         /// <param name="startDate">The start date.</param>
         /// <param name="endDate">The end date.</param>
         /// <returns></returns>
-        /// <exception cref="ArgumentException">Thrown when provided start date is bigger then given end date.</exception>
+        /// <exception cref="ArgumentException">Thrown when provided start date is after given end date.</exception>
         /// <exception cref="ArgumentException">Thrown when one or both of the provided dates' year is before 1946.</exception>
         public static IEnumerable<DateTime> GetItalianHolidaysInRange(DateTime startDate, DateTime endDate)
         {
             if (startDate > endDate)
             {
-                throw new ArgumentException($"{nameof(startDate)} cannot be bigger than {nameof(endDate)}");
+                throw new ArgumentException($"{nameof(startDate)} cannot be after {nameof(endDate)}");
             }
 
             return Enumerable

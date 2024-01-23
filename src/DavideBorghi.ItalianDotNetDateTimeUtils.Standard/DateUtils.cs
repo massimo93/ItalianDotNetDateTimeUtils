@@ -27,11 +27,11 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
         /// <param name="startDate">The starting date.</param>
         /// <param name="endDate">The ending date.</param>
         /// <returns>An array of integers containing the years between the two given dates.</returns>
-        /// <exception cref="System.ArgumentException">Thrown when provided starting date is bigger then given ending date.</exception>
+        /// <exception cref="System.ArgumentException">Thrown when provided starting date is after given ending date.</exception>
         public static int[] GetYearsBetweenDates(DateTime startDate, DateTime endDate)
         {
             if (startDate > endDate) {
-                throw new ArgumentException($"{nameof(startDate)} cannot be bigger than {nameof(endDate)}");
+                throw new ArgumentException($"{nameof(startDate)} cannot be after {nameof(endDate)}");
             }
 
             List<int> years = new List<int>();
