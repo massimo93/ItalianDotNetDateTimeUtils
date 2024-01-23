@@ -1,6 +1,4 @@
-﻿using DavideBorghi.ItalianDotNetDateTimeUtils.Standard.DateTimeEnums;
-
-namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.UnitTests;
+﻿namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.UnitTests;
 
 public sealed class DateTimeQuarterExtensionsTests
 {
