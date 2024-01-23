@@ -393,5 +393,322 @@ public class NationalHolidaysExtensionsTests
         Assert.True(result);
     }
 
+    [Fact]
+    public void IsWorkersDay_ShouldReturnTrueForMay1st1945()
+    {
+        // Arrange
+        DateTime date = new(1945, 5, 1);
+
+        // Act
+        bool result = date.IsWorkersDay();
+
+        // Assert
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void IsWorkersDay_ShouldReturnTrueForMay1st1950()
+    {
+        // Arrange
+        DateTime date = new(1950, 5, 1);
+
+        // Act
+        bool result = date.IsWorkersDay();
+
+        // Assert
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void IsWorkersDay_ShouldReturnTrueForApril21st1924()
+    {
+        // Arrange
+        DateTime date = new(1924, 4, 21);
+
+        // Act
+        bool result = date.IsWorkersDay();
+
+        // Assert
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void IsWorkersDay_ShouldReturnFalseForNonWorkersDay()
+    {
+        // Arrange
+        DateTime date = new(1960, 6, 15);
+
+        // Act
+        bool result = date.IsWorkersDay();
+
+        // Assert
+        Assert.False(result);
+    }
+
+    [Fact]
+    public void IsWorkersDay_ShouldReturnFalseForBefore1890()
+    {
+        // Arrange
+        DateTime date = new(1889, 5, 1);
+
+        // Act
+        bool result = date.IsWorkersDay();
+
+        // Assert
+        Assert.False(result);
+    }
+
+    [Theory]
+    [InlineData(1945, 5, 1, true)]
+    [InlineData(1950, 5, 1, true)]
+    [InlineData(1924, 4, 21, true)]
+    [InlineData(1960, 6, 15, false)]
+    [InlineData(1880, 5, 1, false)]
+    public void IsWorkersDay_ShouldReturnCorrectResult(int year, int month, int day, bool expected)
+    {
+        // Arrange
+        DateTime date = new(year, month, day);
+
+        // Act
+        bool result = date.IsWorkersDay();
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
+    #endregion
+
+    #region June's
+
+    [Fact]
+    public void IsItalianRepublicDay_ShouldReturnTrueForJune2nd1947()
+    {
+        // Arrange
+        DateTime date = new(1947, 6, 2);
+
+        // Act
+        bool result = date.IsItalianRepublicDay();
+
+        // Assert
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void IsItalianRepublicDay_ShouldReturnTrueForJune2nd1950()
+    {
+        // Arrange
+        DateTime date = new(1950, 6, 2);
+
+        // Act
+        bool result = date.IsItalianRepublicDay();
+
+        // Assert
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void IsItalianRepublicDay_ShouldReturnFalseForNonJune2nd()
+    {
+        // Arrange
+        DateTime date = new(1960, 7, 15);
+
+        // Act
+        bool result = date.IsItalianRepublicDay();
+
+        // Assert
+        Assert.False(result);
+    }
+
+    [Fact]
+    public void IsItalianRepublicDay_ShouldReturnFalseForJune2ndBefore1946()
+    {
+        // Arrange
+        DateTime date = new(1945, 6, 2);
+
+        // Act
+        bool result = date.IsItalianRepublicDay();
+
+        // Assert
+        Assert.False(result);
+    }
+
+    [Fact]
+    public void IsSaintsPeterAndPaulFeast_ShouldReturnTrueForJune29th1976()
+    {
+        // Arrange
+        DateTime date = new(1976, 6, 29);
+
+        // Act
+        bool result = date.IsSaintsPeterAndPaulFeast();
+
+        // Assert
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void IsSaintsPeterAndPaulFeast_ShouldReturnFalseForNonJune29th()
+    {
+        // Arrange
+        DateTime date = new(1960, 7, 15);
+
+        // Act
+        bool result = date.IsSaintsPeterAndPaulFeast();
+
+        // Assert
+        Assert.False(result);
+    }
+
+    [Fact]
+    public void IsSaintsPeterAndPaulFeast_ShouldReturnFalseForJune29thAfter1977()
+    {
+        // Arrange
+        DateTime date = new(1980, 6, 29);
+
+        // Act
+        bool result = date.IsSaintsPeterAndPaulFeast();
+
+        // Assert
+        Assert.False(result);
+    }
+
+    [Fact]
+    public void IsSaintsPeterAndPaulFeast_ShouldReturnTrueForJune29thBefore1977()
+    {
+        // Arrange
+        DateTime date = new(1975, 6, 29);
+
+        // Act
+        bool result = date.IsSaintsPeterAndPaulFeast();
+
+        // Assert
+        Assert.True(result);
+    }
+
+    #endregion
+
+    #region August's
+
+    [Theory]
+    [InlineData(2021, 8, 15, true)] // Assumption of Mary Day
+    [InlineData(1990, 8, 15, true)] // Assumption of Mary Day
+    [InlineData(2022, 8, 15, true)] // Assumption of Mary Day
+    [InlineData(1980, 7, 15, false)] // Non-August 15th
+    [InlineData(1975, 8, 14, false)] // Non-August 15th
+    [InlineData(2023, 8, 16, false)] // Non-August 15th
+    public void IsAssumptionOfMaryDay_ShouldReturnCorrectResult(int year, int month, int day, bool expected)
+    {
+        // Arrange
+        DateTime date = new(year, month, day);
+
+        // Act
+        bool result = date.IsAssumptionOfMaryDay();
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
+    #endregion
+
+    #region November's
+
+    [Theory]
+    [InlineData(2021, 11, 1, true)] // All Saints' Day
+    [InlineData(1990, 11, 1, true)] // All Saints' Day
+    [InlineData(2022, 11, 1, true)] // All Saints' Day
+    [InlineData(1980, 10, 31, false)] // Non-November 1st
+    [InlineData(1975, 11, 2, false)] // Non-November 1st
+    [InlineData(2023, 11, 3, false)] // Non-November 1st
+    public void IsAllSaintsDay_ShouldReturnCorrectResult(int year, int month, int day, bool expected)
+    {
+        // Arrange
+        DateTime date = new(year, month, day);
+
+        // Act
+        bool result = date.IsAllSaintsDay();
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
+    [Theory]
+    [InlineData(1945, 11, 4, true)] // Italian National Unity and Armed Forces Day
+    [InlineData(1976, 11, 4, true)] // Italian National Unity and Armed Forces Day
+    [InlineData(1977, 11, 4, false)] // No-holiday in 1977
+    [InlineData(1980, 11, 3, false)] // Non-November 4th
+    [InlineData(1975, 11, 5, false)] // Non-November 4th
+    [InlineData(2023, 11, 4, false)] // No-holiday from 1977
+    public void IsItalianNationalUnityAndArmedForcesDay_ShouldReturnCorrectResult(int year, int month, int day, bool expected)
+    {
+        // Arrange
+        DateTime date = new(year, month, day);
+
+        // Act
+        bool result = date.IsItalianNationalUnityAndArmedForcesDay();
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
+    #endregion
+
+    #region Winter holidays' season
+
+    [Theory]
+    [InlineData(2021, 12, 8, true)] // Immaculate Conception Day
+    [InlineData(1990, 12, 8, true)] // Immaculate Conception Day
+    [InlineData(2022, 12, 8, true)] // Immaculate Conception Day
+    [InlineData(1980, 12, 7, false)] // Non-December 8th
+    [InlineData(1975, 12, 9, false)] // Non-December 8th
+    [InlineData(2023, 12, 10, false)] // Non-December 8th
+    public void IsImmaculateConceptionDay_ShouldReturnCorrectResult(int year, int month, int day, bool expected)
+    {
+        // Arrange
+        DateTime date = new(year, month, day);
+
+        // Act
+        bool result = date.IsImmaculateConceptionDay();
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
+    [Theory]
+    [InlineData(2021, 12, 25, true)] // Christmas
+    [InlineData(1990, 12, 25, true)] // Christmas
+    [InlineData(2022, 12, 25, true)] // Christmas
+    [InlineData(1980, 12, 24, false)] // Non-December 25th
+    [InlineData(1975, 12, 26, false)] // Non-December 25th
+    [InlineData(2023, 12, 27, false)] // Non-December 25th
+    public void IsChristmas_ShouldReturnCorrectResult(int year, int month, int day, bool expected)
+    {
+        // Arrange
+        DateTime date = new(year, month, day);
+
+        // Act
+        bool result = date.IsChristmas();
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
+    [Theory]
+    [InlineData(2021, 12, 26, true)] // Saint Stephen's Day
+    [InlineData(1990, 12, 26, true)] // Saint Stephen's Day
+    [InlineData(2022, 12, 26, true)] // Saint Stephen's Day
+    [InlineData(1980, 12, 25, false)] // Non-December 26th
+    [InlineData(1975, 12, 27, false)] // Non-December 26th
+    [InlineData(2023, 12, 28, false)] // Non-December 26th
+    public void IsSaintStephensDay_ShouldReturnCorrectResult(int year, int month, int day, bool expected)
+    {
+        // Arrange
+        DateTime date = new(year, month, day);
+
+        // Act
+        bool result = date.IsSaintStephensDay();
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
     #endregion
 }
