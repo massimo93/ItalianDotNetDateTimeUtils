@@ -23,6 +23,7 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
         /// <param name="endDate">The end date.</param>
         /// <returns>The number of Italian office days between two dates.</returns>
         /// <exception cref="ArgumentException">Thrown when provided start date is bigger then given end date.</exception>
+        /// <exception cref="ArgumentException">Thrown when one or both of the provided dates' year is before 1946.</exception>
         public static int HowManyItalianOfficeDaysBetweenDates(DateTime startDate, DateTime endDate)
             => HowManyItalianWorkDaysBetweenDates(startDate, endDate, ExcludeWeekendsCondition);
 
@@ -36,6 +37,7 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
         /// <paramref name="workingDayCondition">Condition to consider matching dates as work days.</param>
         /// <returns>The number of Italian calculated work days.</returns>
         /// <exception cref="ArgumentException">Thrown when provided start date is bigger then given end date.</exception>
+        /// <exception cref="ArgumentException">Thrown when one or both of the provided dates' year is before 1946.</exception>
         public static int HowManyItalianWorkDaysBetweenDates(DateTime startDate, DateTime endDate, Func<DateTime, bool> workingDayCondition)
         {
             if (startDate > endDate)

@@ -30,6 +30,7 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>True if the given date is an Italian (national or local) holiday; otherwise, false.</returns>
+        /// <exception cref="ArgumentException">Thrown when provided date's year is before 1946.</exception>
         public static bool IsHoliday(DateTime date)
         {
             if (date.Year < 1946)
@@ -87,8 +88,15 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
         /// </summary>
         /// <param name="year">The given year.</param>
         /// <returns>A list of yearly Italian holidays.</returns>
+        /// <exception cref="ArgumentException">Thrown when provided year is before 1946.</exception>
         public static IEnumerable<DateTime> GetYearlyItalianHolidays(int year)
-            => GetItalianHolidaysInRange(new DateTime(year, 1, 1) , new DateTime(year, 12, 31));
+        {
+            if (year < 1946)
+            {
+                throw new ArgumentException($"Given {nameof(year)} must be later than 1945");
+            }
+            return GetItalianHolidaysInRange(new DateTime(year, 1, 1) , new DateTime(year, 12, 31));
+        }
 
         /// <summary>
         /// Gets a DateTime list of Italian holidays between given dates.
@@ -97,6 +105,7 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
         /// <param name="endDate">The end date.</param>
         /// <returns></returns>
         /// <exception cref="ArgumentException">Thrown when provided start date is bigger then given end date.</exception>
+        /// <exception cref="ArgumentException">Thrown when one or both of the provided dates' year is before 1946.</exception>
         public static IEnumerable<DateTime> GetItalianHolidaysInRange(DateTime startDate, DateTime endDate)
         {
             if (startDate > endDate)
