@@ -325,4 +325,73 @@ public class NationalHolidaysExtensionsTests
     }
 
     #endregion
+
+    #region May's
+
+    [Fact]
+    public void IsLateModernPeriodWorkersDay_ShouldReturnTrueForMay1st1945()
+    {
+        // Arrange
+        DateTime date = new(1945, 5, 1);
+
+        // Act
+        bool result = date.IsLateModernPeriodWorkersDay();
+
+        // Assert
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void IsLateModernPeriodWorkersDay_ShouldReturnTrueForMay1st1950()
+    {
+        // Arrange
+        DateTime date = new(1950, 5, 1);
+
+        // Act
+        bool result = date.IsLateModernPeriodWorkersDay();
+
+        // Assert
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void IsLateModernPeriodWorkersDay_ShouldReturnFalseForNonMay1st()
+    {
+        // Arrange
+        DateTime date = new(1960, 6, 15);
+
+        // Act
+        bool result = date.IsLateModernPeriodWorkersDay();
+
+        // Assert
+        Assert.False(result);
+    }
+
+    [Fact]
+    public void IsLateModernPeriodWorkersDay_ShouldReturnFalseForMay1stBefore1945()
+    {
+        // Arrange
+        DateTime date = new(1944, 5, 1);
+
+        // Act
+        bool result = date.IsLateModernPeriodWorkersDay();
+
+        // Assert
+        Assert.False(result);
+    }
+
+    [Fact]
+    public void IsLateModernPeriodWorkersDay_ShouldReturnTrueForMay1stAfter1950()
+    {
+        // Arrange
+        DateTime date = new(2024, 5, 1);
+
+        // Act
+        bool result = date.IsLateModernPeriodWorkersDay();
+
+        // Assert
+        Assert.True(result);
+    }
+
+    #endregion
 }
