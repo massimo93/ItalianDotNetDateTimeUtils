@@ -13,31 +13,38 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
         /// <param name="dateAsString">Date formatted as ddMM</param>
         /// <param name="year">An integer value representing the year.</param>
         /// <returns>The day in DateTime format.</returns>
-        /// <exception cref="ArgumentOutOfRangeException">Thrown when provided day or month part of given date as string are not in a valid range
-        /// or when the corresponding DateTime is not valid.</exception>
+        /// <exception cref="ArgumentOutOfRangeException">Thrown when:
+        /// - provided day or month part of given date as string are not in a valid range;
+        /// - or when given year value is less than System.Int32.MinValue or greater than System.Int32.MaxValue.
+        /// - or when the corresponding DateTime is not valid.</exception>
         ///<exception cref="ArgumentNullException">Thrown when provided day or month part of given date as string are null or empty.</exception>
         ///<exception cref="FormatException">Thrown when provided day or month part of given date as string are not in the correct integer format.</exception>
         ///<exception cref="OverflowException">Thrown when provided day or month part of given date as string and converted as integer 
         ///result in a value less than System.Int32.MinValue or greater than System.Int32.MaxValue.</exception>
         public static DateTime GetDateTimeFromDateAsStringAndYear(string dateAsString, int year)
         {
+            if (year < Int32.MinValue || year > Int32.MaxValue)
+            {
+                throw new ArgumentOutOfRangeException($"Provided '{nameof(year)}' value is out of allowed range");
+            }
+
             if (string.IsNullOrWhiteSpace(dateAsString))
             {
-                throw new ArgumentNullException($"{nameof(dateAsString)} is null or consists only in white-space characters");
+                throw new ArgumentNullException($"Provided '{nameof(dateAsString)}' is null or consists only in white-space characters");
             }
-            
+
             dateAsString = dateAsString.Trim();
 
             int day = int.Parse(dateAsString[..2]);
             if (day < 1 || day > 31)
             {
-                throw new ArgumentOutOfRangeException("Day part of given date as string must be in valid range");
+                throw new ArgumentOutOfRangeException($"Day part of given '{nameof(dateAsString)}' is out of allowed range");
             }
 
             int month = int.Parse(dateAsString.Substring(2, 2));
             if (month < 1 || month > 12)
             {
-                throw new ArgumentOutOfRangeException("Month part of given date as string must be in valid range");
+                throw new ArgumentOutOfRangeException($"Month part of given '{nameof(dateAsString)}' is out of allowed range");
             }
 
             year = dateAsString.Length > 4 ? int.Parse(dateAsString.Substring(4, 4)) : year;

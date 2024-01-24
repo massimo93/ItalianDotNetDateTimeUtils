@@ -21,4 +21,25 @@ public sealed class DateUtilsTests
         Assert.Equal(expectedMonth, result.Month);
         Assert.Equal(expectedDay, result.Day);
     }
+
+    [Theory]
+    [InlineData(null, 2021, typeof(ArgumentNullException))] // Null dateAsString
+    [InlineData("", 2021, typeof(ArgumentNullException))] // Empty dateAsString
+    [InlineData("  ", 2021, typeof(ArgumentNullException))] // Whitespace-only dateAsString
+    [InlineData("3205", 2021, typeof(ArgumentOutOfRangeException))] // Invalid day
+    [InlineData("1233", 2021, typeof(ArgumentOutOfRangeException))] // Invalid month
+    public void GetDateTimeFromDateAsStringAndYear_ShouldThrowExceptionForInvalidInput(string dateAsString, int year, Type expectedExceptionType)
+    {
+        // Act & Assert
+        Assert.Throws(expectedExceptionType, () => DateUtils.GetDateTimeFromDateAsStringAndYear(dateAsString, year));
+    }
+
+    [Theory]
+    [InlineData("0101", Int32.MaxValue, typeof(ArgumentOutOfRangeException))] // Invalid year (greater than Int32.MaxValue)
+    [InlineData("0101", Int32.MinValue, typeof(ArgumentOutOfRangeException))] // Invalid year (less than Int32.MinValue)
+    public void GetDateTimeFromDateAsStringAndYear_ShouldThrowExceptionForInvalidYear(string dateAsString, int year, Type expectedExceptionType)
+    {
+        // Act & Assert
+        Assert.Throws(expectedExceptionType, () => DateUtils.GetDateTimeFromDateAsStringAndYear(dateAsString, year));
+    }
 }
