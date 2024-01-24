@@ -25,12 +25,11 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
         {
             if (year < Int32.MinValue || year > Int32.MaxValue)
             {
-                throw new ArgumentOutOfRangeException($"Provided '{nameof(year)}' value is out of allowed range");
+                throw new ArgumentOutOfRangeException($"Given '{nameof(year)}' value is out of allowed range");
             }
-
             if (string.IsNullOrWhiteSpace(dateAsString))
             {
-                throw new ArgumentNullException($"Provided '{nameof(dateAsString)}' is null or consists only in white-space characters");
+                throw new ArgumentNullException($"Given '{nameof(dateAsString)}' is null or consists only in white-space characters");
             }
 
             dateAsString = dateAsString.Trim();

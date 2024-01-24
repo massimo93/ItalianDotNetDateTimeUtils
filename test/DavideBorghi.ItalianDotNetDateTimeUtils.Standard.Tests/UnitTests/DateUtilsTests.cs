@@ -42,4 +42,71 @@ public sealed class DateUtilsTests
         // Act & Assert
         Assert.Throws(expectedExceptionType, () => DateUtils.GetDateTimeFromDateAsStringAndYear(dateAsString, year));
     }
+
+    [Fact]
+    public void GetYearsBetweenDates_ShouldReturnArrayOfYears()
+    {
+        // Arrange
+        DateTime startDate = new(2020, 1, 1);
+        DateTime endDate = new(2025, 12, 31);
+
+        // Act
+        int[] result = DateUtils.GetYearsBetweenDates(startDate, endDate);
+
+        // Assert
+        Assert.Equal([2020, 2021, 2022, 2023, 2024, 2025], result);
+    }
+
+    [Fact]
+    public void GetYearsBetweenDates_ShouldReturnSingleYear()
+    {
+        // Arrange
+        DateTime startDate = new(2022, 6, 15);
+        DateTime endDate = new(2022, 12, 31);
+
+        // Act
+        int[] result = DateUtils.GetYearsBetweenDates(startDate, endDate);
+
+        // Assert
+        Assert.Equal([2022], result);
+    }
+
+    [Fact]
+    public void GetYearsBetweenDates_ShouldThrowArgumentExceptionIfEndDateIsBeforeStartDate()
+    {
+        // Arrange
+        DateTime startDate = new(2023, 1, 1);
+        DateTime endDate = new(2022, 12, 31);
+
+        // Act & Assert
+        Assert.Throws<ArgumentException>(() => DateUtils.GetYearsBetweenDates(startDate, endDate));
+    }
+
+    [Theory]
+    [InlineData("2020-01-01", "2025-12-31", new[] { 2020, 2021, 2022, 2023, 2024, 2025 })]
+    [InlineData("2022-06-15", "2022-12-31", new[] { 2022 })]
+    public void GetYearsBetweenDates_ShouldReturnArrayOfYears_UsingTheory(string startDateString, string endDateString, int[] expectedYears)
+    {
+        // Arrange
+        DateTime startDate = DateTime.Parse(startDateString);
+        DateTime endDate = DateTime.Parse(endDateString);
+
+        // Act
+        int[] result = DateUtils.GetYearsBetweenDates(startDate, endDate);
+
+        // Assert
+        Assert.Equal(expectedYears, result);
+    }
+
+    [Theory]
+    [InlineData("2023-01-01", "2022-12-31")]
+    public void GetYearsBetweenDates_ShouldThrowArgumentExceptionIfEndDateIsBeforeStartDate_UsingTheory(string startDateString, string endDateString)
+    {
+        // Arrange
+        DateTime startDate = DateTime.Parse(startDateString);
+        DateTime endDate = DateTime.Parse(endDateString);
+
+        // Act & Assert
+        Assert.Throws<ArgumentException>(() => DateUtils.GetYearsBetweenDates(startDate, endDate));
+    }
 }
