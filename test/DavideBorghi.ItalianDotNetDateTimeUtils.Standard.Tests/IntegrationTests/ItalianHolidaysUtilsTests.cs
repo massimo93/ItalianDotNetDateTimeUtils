@@ -4,7 +4,7 @@ public sealed class ItalianHolidaysUtilsTests
 {
     #region Private Fields
 
-    public static Func<DateTime, bool>? IsLocalHoliday => date => date.Month == 6 && date.Day == 24;
+    public static Func<DateTime, bool>? IncludeJune24AsLocalHoliday => date => date.Month == 6 && date.Day == 24;
 
     #endregion
 
@@ -25,7 +25,7 @@ public sealed class ItalianHolidaysUtilsTests
 
     #endregion
 
-    #region Italian Holiday
+    #region National Holidays
 
     [Fact]
     public void XmasIsHoliday()
@@ -55,7 +55,7 @@ public sealed class ItalianHolidaysUtilsTests
     [InlineData("2023/06/24")]
     public void Check_If_GivenLocalHolidayDateTime_IsHoliday(DateTime givenDate)
     {
-        ItalianHolidaysUtils.IsLocalHoliday = IsLocalHoliday;
+        ItalianHolidaysUtils.IsLocalHoliday = IncludeJune24AsLocalHoliday;
         Assert.True(ItalianHolidaysUtils.IsHoliday(givenDate));
     }
 
@@ -63,7 +63,7 @@ public sealed class ItalianHolidaysUtilsTests
     [InlineData("2023/11/04")]
     public void Check_If_GivenLocalHolidayDateTime_IsNotHoliday(DateTime givenDate)
     {
-        ItalianHolidaysUtils.IsLocalHoliday = IsLocalHoliday;
+        ItalianHolidaysUtils.IsLocalHoliday = IncludeJune24AsLocalHoliday;
         Assert.False(ItalianHolidaysUtils.IsHoliday(givenDate));
     }
 
