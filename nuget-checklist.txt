@@ -1,0 +1,19 @@
+Nuget Checklist
+
+This txt doc aims to be an initial short guide to follow when a new release needs to be packed and published to Nuget.
+The following checklist content has been suggested by reading this blog post https://ardalis.com/nuget-publication-checklist by Steve Smith (Ardalis). 
+
+1. Update DavideBorghi.ItalianDotNetDateTimeUtils.csproj providing:
+    - Version number update (i.e.: <Version>2.0.0</Version>);
+    - Package release notes (i.e.: <PackageReleaseNotes>Upgrade to .NET Standard 2.1 and include relevant implementation refactorings.<PackageReleaseNotes>).
+    
+2. Update DavideBorghi.ItalianDotNetDateTimeUtils.nuspec providing:
+    - Version number update (i.e.: <version>2.0.0</version>);
+    - Package release notes (i.e.: <releaseNotes>Upgrade to .NET Standard 2.1 and include relevant implementation refactorings.</releaseNotes>);
+    - Update Copiright, if relevant (i.e.: <copyright>Copyright 2024</copyright).
+
+3. Start packing locally, navigating to src/DavideBorghi.ItalianDotNetDateTimeUtils directory, and run the following command:
+    dotnet pack -c Release DavideBorghi.ItalianDotNetDateTimeUtils.csproj /p:NuspecFile=DavideBorghi.ItalianDotNetDateTimeUtils.nuspec
+
+4. From /bin/release directory run the following command, specifying <key> value:
+    dotnet nuget push -s https://www.nuget.org/api/v2/package -k <key> DavideBorghi.ItalianDotNetDateTimeUtils.2.0.0.nupkg
