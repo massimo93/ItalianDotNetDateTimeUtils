@@ -2,11 +2,17 @@
 
 ## Hello everybody!
 
-My Name is __ItalianDotNetDateTimeUtils__ I'm a class library writed by [Davide Borghi](https://www.linkedin.com/in/davide-borghi-87364014a/). He wrote me because he was bored to copy and paste this class in every project he was working on.
+My name is __ItalianDotNetDateTimeUtils__ and I'm a class library written by [Davide Borghi](https://www.linkedin.com/in/davide-borghi-87364014a/). 
+He wrote me because he was bored to copy and paste a static class in every project he was working on.
 
-My role is to support Italian developers or any developers who need support with Italian Calendar.
+Another stubborn developer, [Massimo Serra](https://www.linkedin.com/in/massimo-serra/), also decided to support Davide with my code.
 
-**I'm currently under developing, at the moment I have very little tests and documentation, so be patients with me, I promise, my developer is working hard on this things!**
+As a humble, simple and pluggable .NET Standard 2.1 utility library, my role is to support Italian developers or any developer who need support when dealing with Italian holidays (both national and customizable local ones) and work days calculations, which sometimes can be really boring!
 
-You can find me on [nuget](https://www.nuget.org/packages/DavideBorghi.ItalianDotNetDateTimeUtils/)!
+**I'm always under developing, but still, I come with a good set of automated unit and integration tests.**
 
+**My developers are committed to extend my functionalities and documentation too, so be patients with me, I promise, they're working hard on this things in their spare time!**
+
+For this reason, please, feel free to file comments, open issues and, if you want, even fork my code and open pull requests: only bear in mind to check my open source licence to be nice with me.
+
+Lastly, don't forget you can find me on **[Nuget](https://www.nuget.org/packages/DavideBorghi.ItalianDotNetDateTimeUtils/)**!
