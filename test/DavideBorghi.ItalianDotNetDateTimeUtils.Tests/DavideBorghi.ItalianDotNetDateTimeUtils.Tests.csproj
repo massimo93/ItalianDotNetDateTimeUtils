@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\DavideBorghi.ItalianDotNetDateTimeUtils.Standard\DavideBorghi.ItalianDotNetDateTimeUtils.Standard.csproj" />
+    <ProjectReference Include="../../src/DavideBorghi.ItalianDotNetDateTimeUtils/DavideBorghi.ItalianDotNetDateTimeUtils.csproj" />
   </ItemGroup>
 
 </Project>

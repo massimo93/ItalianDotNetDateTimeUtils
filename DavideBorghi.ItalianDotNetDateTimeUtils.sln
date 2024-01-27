@@ -3,17 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavideBorghi.ItalianDotNetDateTimeUtils", "DavideBorghi.ItalianDotNetDateTimeUtils\DavideBorghi.ItalianDotNetDateTimeUtils.csproj", "{3D3DD8D4-3A82-4C92-9158-3C0F2EEB7805}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavideBorghi.ItalianDotNetDateTimeUtils.Tests", "DavideBorghi.ItalianDotNetDateTimeUtils.Tests\DavideBorghi.ItalianDotNetDateTimeUtils.Tests.csproj", "{60DF374C-2380-4291-9265-827D2C5DCBD0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1F9E5E8F-FDF4-47B6-835B-1709E55EE1ED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{AAF8B5EB-16A5-4259-8DC0-31DA1D87C9CA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DavideBorghi.ItalianDotNetDateTimeUtils.Standard", "src\DavideBorghi.ItalianDotNetDateTimeUtils.Standard\DavideBorghi.ItalianDotNetDateTimeUtils.Standard.csproj", "{B8A8CF70-F6A0-42EC-A1A3-1171F735C41B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DavideBorghi.ItalianDotNetDateTimeUtils", "src\DavideBorghi.ItalianDotNetDateTimeUtils\DavideBorghi.ItalianDotNetDateTimeUtils.csproj", "{B8A8CF70-F6A0-42EC-A1A3-1171F735C41B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests", "test\DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests\DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.csproj", "{62D5BBE4-F5AD-4D6E-BC0B-1552292FD3CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DavideBorghi.ItalianDotNetDateTimeUtils.Tests", "test\DavideBorghi.ItalianDotNetDateTimeUtils.Tests\DavideBorghi.ItalianDotNetDateTimeUtils.Tests.csproj", "{62D5BBE4-F5AD-4D6E-BC0B-1552292FD3CD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{429205B5-E20F-46F7-B241-FB00DAC3293F}"
 	ProjectSection(SolutionItems) = preProject
@@ -28,14 +24,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3D3DD8D4-3A82-4C92-9158-3C0F2EEB7805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D3DD8D4-3A82-4C92-9158-3C0F2EEB7805}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D3DD8D4-3A82-4C92-9158-3C0F2EEB7805}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D3DD8D4-3A82-4C92-9158-3C0F2EEB7805}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60DF374C-2380-4291-9265-827D2C5DCBD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60DF374C-2380-4291-9265-827D2C5DCBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60DF374C-2380-4291-9265-827D2C5DCBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60DF374C-2380-4291-9265-827D2C5DCBD0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8A8CF70-F6A0-42EC-A1A3-1171F735C41B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8A8CF70-F6A0-42EC-A1A3-1171F735C41B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8A8CF70-F6A0-42EC-A1A3-1171F735C41B}.Release|Any CPU.ActiveCfg = Release|Any CPU

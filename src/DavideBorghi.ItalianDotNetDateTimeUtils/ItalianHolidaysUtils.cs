@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
+namespace DavideBorghi.ItalianDotNetDateTimeUtils
 {
     public class ItalianHolidaysUtils
     {

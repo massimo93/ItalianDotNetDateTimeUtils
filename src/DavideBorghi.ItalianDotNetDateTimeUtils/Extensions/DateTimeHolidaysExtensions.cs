@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
+namespace DavideBorghi.ItalianDotNetDateTimeUtils
 {
     public static class DateTimeHolidaysExtensions
     {

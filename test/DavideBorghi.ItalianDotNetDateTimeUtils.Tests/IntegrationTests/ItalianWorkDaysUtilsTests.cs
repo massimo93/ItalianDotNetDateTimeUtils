@@ -1,4 +1,4 @@
-﻿namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.IntegrationTests;
+﻿namespace DavideBorghi.ItalianDotNetDateTimeUtils.Tests.IntegrationTests;
 
 public sealed class ItalianWorkDaysUtilsTests
 {

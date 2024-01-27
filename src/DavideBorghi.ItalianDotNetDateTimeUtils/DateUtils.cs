@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
+namespace DavideBorghi.ItalianDotNetDateTimeUtils
 {
     public static class DateUtils
     {

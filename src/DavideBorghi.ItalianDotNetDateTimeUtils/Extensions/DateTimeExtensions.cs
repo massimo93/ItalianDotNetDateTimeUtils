@@ -1,7 +1,7 @@
-﻿using DavideBorghi.ItalianDotNetDateTimeUtils.Standard.DateTimeEnums;
+﻿using DavideBorghi.ItalianDotNetDateTimeUtils.DateTimeEnums;
 using System;
 
-namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard
+namespace DavideBorghi.ItalianDotNetDateTimeUtils
 {
     public static class DateTimeExtensions
     {

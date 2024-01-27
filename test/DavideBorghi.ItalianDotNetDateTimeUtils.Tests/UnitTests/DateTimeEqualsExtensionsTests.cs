@@ -1,4 +1,4 @@
-﻿namespace DavideBorghi.ItalianDotNetDateTimeUtils.Standard.Tests.UnitTests;
+﻿namespace DavideBorghi.ItalianDotNetDateTimeUtils.Tests.UnitTests;
 
 public sealed class DateTimeEqualsExtensionsTests
 {
