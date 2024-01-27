@@ -7,7 +7,7 @@ He wrote me because he was bored to copy and paste a static class in every proje
 
 Another stubborn developer, [Massimo Serra](https://www.linkedin.com/in/massimo-serra/), also decided to support Davide with my code.
 
-As a humble, simple and pluggable .NET Standard 2.1 utility library, my role is to support Italian developers or any developer who need support when dealing with Italian holidays (both national and customizable local ones) and work days calculations, which sometimes can be really boring!
+As a humble, simple and pluggable .NET Standard 2.1 utility library, my role is to help Italian developers or any developer who need support when dealing with Italian holidays (both national and customizable local ones) and work days calculations, which sometimes can be really boring!
 
 **I'm always under developing, but still, I come with a good set of automated unit and integration tests.**
 
