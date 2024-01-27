@@ -3,6 +3,9 @@ using System;
 
 namespace DavideBorghi.ItalianDotNetDateTimeUtils
 {
+    /// <summary>
+    /// Provides extension methods for DateTime, supporting equality check, week and weekends, days of months, quarters and four month periods.
+    /// </summary>
     public static class DateTimeExtensions
     {
         #region Equals

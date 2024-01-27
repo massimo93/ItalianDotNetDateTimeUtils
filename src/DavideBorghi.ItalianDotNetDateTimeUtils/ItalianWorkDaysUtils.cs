@@ -2,14 +2,36 @@
 
 namespace DavideBorghi.ItalianDotNetDateTimeUtils
 {
-    public class ItalianWorkDaysUtils
+    /// <summary>
+    /// Provides static utility methods when dealing with Italian work days calculations.
+    /// </summary>
+    public static class ItalianWorkDaysUtils
     {
         #region Public Functions
 
+        /// <summary>
+        /// Function set up to exclude weekends.
+        /// </summary>
         public static Func<DateTime, bool> ExcludeWeekendsCondition => date => !date.IsWeekend();
+
+        /// <summary>
+        /// Function set up to exclude Sundays only.
+        /// </summary>
         public static Func<DateTime, bool> ExcludeSundaysCondition => date => date.DayOfWeek != DayOfWeek.Sunday;
+
+        /// <summary>
+        /// Function set up to include weekends.
+        /// </summary>
         public static Func<DateTime, bool> IncludeWeekendsCondition => date => true;
+
+        /// <summary>
+        /// Function set up to include only even days.
+        /// </summary>
         public static Func<DateTime, bool> IncludeOnlyEvenDaysCondition => date => date.Day % 2 == 0;
+
+        /// <summary>
+        /// Function set up to include only odd days.
+        /// </summary>
         public static Func<DateTime, bool> IncludeOnlyOddDaysCondition => date => date.Day % 2 != 0;
 
         #endregion
