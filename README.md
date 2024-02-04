@@ -9,7 +9,7 @@ He wrote me because he was bored to copy and paste a static class in every proje
 
 Another stubborn developer, [Massimo Serra](https://www.linkedin.com/in/massimo-serra/), also decided to support Davide with my code.
 
-As a humble, simple and pluggable .NET Standard 2.1 utility library, my role is to help Italian developers or any developer who need support when dealing with Italian holidays (both national and customizable local ones) and work days calculations, which sometimes can be really boring!
+As a humble, simple and pluggable .NET Standard 2.0 utility library, my role is to help Italian developers or any developer who need support when dealing with Italian holidays (both national and customizable local ones) and work days calculations, which sometimes can be really boring!
 
 **Even if I have a good set of unit tests, my developers are committed to extend my features and documentation too, so be patient with me, I promise, they're working hard on this things in their spare time!**
 
@@ -21,7 +21,7 @@ You can find me on **[NuGet](https://www.nuget.org/packages/DavideBorghi.Italian
 
 ### Installation and prerequisites
 
-The library uses .NET Standard 2.1.
+The library uses .NET Standard 2.0 to support both .NET Framework and .NET (Core).
 
 You should install the latest version [via NuGet](https://www.nuget.org/packages/DavideBorghi.ItalianDotNetDateTimeUtils):
 

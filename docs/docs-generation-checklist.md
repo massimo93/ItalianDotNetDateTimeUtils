@@ -16,7 +16,7 @@ This generator offers a CLI tool that has been used to upstart the documentation
 
 2. Prepare to generate the markdown docs files:
     - To generated updated docs, bear in mind to specify the destination folder with caution, because the tool **overrides** all the speciefied folder content.
-    - To keep consistency in the repository, PROJECT_ASSEMBLY_PATH should be something like _src/DavideBorghi.ItalianDotNetDateTimeUtils/bin/release/netstandard2.1/DavideBorghi.ItalianDotNetDateTimeUtils.dll_ and GENERATED_DOCS_FOLDER should be replaced with _docs/generated_, only bear in mind to launch the command inside the main repository directory, i.e. _ItalianDotNetDateTimeUtils_.
+    - To keep consistency in the repository, PROJECT_ASSEMBLY_PATH should be something like _src/DavideBorghi.ItalianDotNetDateTimeUtils/bin/release/netstandard2.0/DavideBorghi.ItalianDotNetDateTimeUtils.dll_ and GENERATED_DOCS_FOLDER should be replaced with _docs/generated_, only bear in mind to launch the command inside the main repository directory, i.e. _ItalianDotNetDateTimeUtils_.
     - With this in mind, run the following command, replacing PROJECT_ASSEMBLY_PATH and GENERATED_DOCS_FOLDER placeholders with respective values:
     
     **mddocs apireference -a PROJECT_ASSEMBLY_PATH -o GENERATED_DOCS_FOLDER**

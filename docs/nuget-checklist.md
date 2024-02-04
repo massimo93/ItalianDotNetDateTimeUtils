@@ -8,11 +8,11 @@ The following checklist content has been suggested by reading this [blog post](h
 
 1. Update **DavideBorghi.ItalianDotNetDateTimeUtils.csproj** providing:
     - Version number update (e.g.: <Version>2.0.0</Version>);
-    - Package release notes (e.g.: <PackageReleaseNotes>Upgrade to .NET Standard 2.1 and include relevant implementation refactorings.<PackageReleaseNotes>).
+    - Package release notes (e.g.: <PackageReleaseNotes>Upgrade to .NET Standard 2.0 and include relevant implementation refactorings.<PackageReleaseNotes>).
     
 2. Update **DavideBorghi.ItalianDotNetDateTimeUtils.nuspec** providing:
     - Version number update (e.g.: <version>2.0.0</version>);
-    - Package release notes (e.g.: <releaseNotes>Upgrade to .NET Standard 2.1 and include relevant implementation refactorings.</releaseNotes>);
+    - Package release notes (e.g.: <releaseNotes>Upgrade to .NET Standard 2.0 and include relevant implementation refactorings.</releaseNotes>);
     - Update Copyright, if relevant (e.g.: <copyright>Copyright 2024</copyright).
 
 3. Create a package locally by navigating to _src/DavideBorghi.ItalianDotNetDateTimeUtils_ directory and by runnning the following command:
