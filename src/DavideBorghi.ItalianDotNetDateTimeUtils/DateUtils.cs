@@ -37,7 +37,7 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils
 
             dateAsString = dateAsString.Trim();
 
-            int day = int.Parse(dateAsString[..2]);
+            int day = int.Parse(dateAsString.Substring(0, 2));
             if (day < 1 || day > 31)
             {
                 throw new ArgumentOutOfRangeException($"Day part of given '{nameof(dateAsString)}' is out of allowed range");

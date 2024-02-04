@@ -93,26 +93,40 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>An integer representing the ordinal number of the date corresponding quarter.</returns>
-        public static int Quarter(this DateTime dateTime) => dateTime switch
+        public static int Quarter(this DateTime dateTime)
         {
-            _ when dateTime.Month <= 3 => 1,
-            _ when dateTime.Month <= 6 => 2,
-            _ when dateTime.Month <= 9 => 3,
-            _ => 4
-        };
+            switch (dateTime.Month)
+            {
+                case int month when month <= 3:
+                    return 1;
+                case int month when month <= 6:
+                    return 2;
+                case int month when month <= 9:
+                    return 3;
+                default:
+                    return 4;
+            }
+        }
 
         /// <summary>
         /// Gets an enum representing the date corresponding quarter.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>An enum representing the quarter related to the given date.</returns>
-        public static QuarterOfYear QuarterOfYear(this DateTime dateTime) => dateTime switch
+        public static QuarterOfYear QuarterOfYear(this DateTime dateTime)
         {
-            _ when dateTime.Month <= 3 => DateTimeEnums.QuarterOfYear.First,
-            _ when dateTime.Month <= 6 => DateTimeEnums.QuarterOfYear.Second,
-            _ when dateTime.Month <= 9 => DateTimeEnums.QuarterOfYear.Third,
-            _ => DateTimeEnums.QuarterOfYear.Fourth
-        };
+            switch (dateTime.Month)
+            {
+                case int month when month <= 3:
+                    return DateTimeEnums.QuarterOfYear.First;
+                case int month when month <= 6:
+                    return DateTimeEnums.QuarterOfYear.Second;
+                case int month when month <= 9:
+                    return DateTimeEnums.QuarterOfYear.Third;
+                default:
+                    return DateTimeEnums.QuarterOfYear.Fourth;
+            }
+        }
 
         /// <summary>
         /// Gets the first day of the date corresponding quarter.
@@ -135,52 +149,80 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>An integer representing the ordinal number of the first month of the date corresponding quarter.</returns>
-        public static int FirstMonthOfQuarter(this DateTime dateTime) => dateTime.Quarter() switch
+        public static int FirstMonthOfQuarter(this DateTime dateTime)
         {
-            1 => 1,
-            2 => 4,
-            3 => 7,
-            _ => 10
-        };
+            switch (dateTime.Quarter())
+            {
+                case 1:
+                    return 1;
+                case 2:
+                    return 4;
+                case 3:
+                    return 7;
+                default:
+                    return 10;
+            }
+        }
 
         /// <summary>
         /// Gets an enum representing the first month of the date corresponding quarter.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>An enum representing the first month of the date corresponding quarter.</returns>
-        public static MonthOfYear FirstMonthOfQuarterYear(this DateTime dateTime) => dateTime.QuarterOfYear() switch
+        public static MonthOfYear FirstMonthOfQuarterYear(this DateTime dateTime)
         {
-            DateTimeEnums.QuarterOfYear.First => DateTimeEnums.MonthOfYear.January,
-            DateTimeEnums.QuarterOfYear.Second => DateTimeEnums.MonthOfYear.April,
-            DateTimeEnums.QuarterOfYear.Third => DateTimeEnums.MonthOfYear.July,
-            _ => DateTimeEnums.MonthOfYear.October
-        };
+            switch (dateTime.QuarterOfYear())
+            {
+                case DateTimeEnums.QuarterOfYear.First:
+                    return DateTimeEnums.MonthOfYear.January;
+                case DateTimeEnums.QuarterOfYear.Second:
+                    return DateTimeEnums.MonthOfYear.April;
+                case DateTimeEnums.QuarterOfYear.Third:
+                    return DateTimeEnums.MonthOfYear.July;
+                default:
+                    return DateTimeEnums.MonthOfYear.October;
+            }
+        }
 
         /// <summary>
         /// Gets the ordinal number of the last month of the date corresponding quarter.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>An integer representing the ordinal number of the last month of the date corresponding quarter.</returns>
-        public static int LastMonthOfQuarter(this DateTime dateTime) => dateTime.Quarter() switch
+        public static int LastMonthOfQuarter(this DateTime dateTime)
         {
-            1 => 3,
-            2 => 6,
-            3 => 9,
-            _ => 12
-        };
+            switch (dateTime.Quarter())
+            {
+                case 1:
+                    return 3;
+                case 2:
+                    return 6;
+                case 3:
+                    return 9;
+                default:
+                    return 12;
+            }
+        }
 
         /// <summary>
         /// Gets an enum representing the last month of the date corresponding quarter.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>An enum representing the last month of the date corresponding quarter.</returns>
-        public static MonthOfYear LastMonthOfQuarterYear(this DateTime dateTime) => dateTime.QuarterOfYear() switch
+        public static MonthOfYear LastMonthOfQuarterYear(this DateTime dateTime)
         {
-            DateTimeEnums.QuarterOfYear.First => DateTimeEnums.MonthOfYear.March,
-            DateTimeEnums.QuarterOfYear.Second => DateTimeEnums.MonthOfYear.June,
-            DateTimeEnums.QuarterOfYear.Third => DateTimeEnums.MonthOfYear.September,
-            _ => DateTimeEnums.MonthOfYear.December
-        };
+            switch (dateTime.QuarterOfYear())
+            {
+                case DateTimeEnums.QuarterOfYear.First:
+                    return DateTimeEnums.MonthOfYear.March;
+                case DateTimeEnums.QuarterOfYear.Second:
+                    return DateTimeEnums.MonthOfYear.June;
+                case DateTimeEnums.QuarterOfYear.Third:
+                    return DateTimeEnums.MonthOfYear.September;
+                default:
+                    return DateTimeEnums.MonthOfYear.December;
+            }
+        }
 
         #endregion
 
@@ -191,24 +233,36 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>An integer representing the ordinal number of the date corresponding fourth month period.</returns>
-        public static int FourMonthPeriod(this DateTime dateTime) => dateTime switch
+        public static int FourMonthPeriod(this DateTime dateTime)
         {
-            _ when dateTime.Month <= 4 => 1,
-            _ when dateTime.Month <= 8 => 2,
-            _ => 3
-        };
+            switch (dateTime.Month)
+            {
+                case int month when month <= 4:
+                    return 1;
+                case int month when month <= 8:
+                    return 2;
+                default:
+                    return 3;
+            }
+        }
 
         /// <summary>
         /// Gets an enum representing the date corresponding fourth month period.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>An enum representing the ordinal number of the date corresponding fourth month period.</returns>
-        public static FourMonthPeriodOfYear FourMonthPeriodOfYear(this DateTime dateTime) => dateTime switch
+        public static FourMonthPeriodOfYear FourMonthPeriodOfYear(this DateTime dateTime)
         {
-            _ when dateTime.Month <= 4 => DateTimeEnums.FourMonthPeriodOfYear.First,
-            _ when dateTime.Month <= 8 => DateTimeEnums.FourMonthPeriodOfYear.Second,
-            _ => DateTimeEnums.FourMonthPeriodOfYear.Third
-        };
+            switch (dateTime.Month)
+            {
+                case int month when month <= 4:
+                    return DateTimeEnums.FourMonthPeriodOfYear.First;
+                case int month when month <= 8:
+                    return DateTimeEnums.FourMonthPeriodOfYear.Second;
+                default:
+                    return DateTimeEnums.FourMonthPeriodOfYear.Third;
+            }
+        }
 
         /// <summary>
         /// Gets the first day of the date corresponding four mounth period.
@@ -231,48 +285,72 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>An integer representing the ordinal number of the first month of the date corresponding four month period.</returns>
-        public static int FirstMonthOfFourMonthPeriod(this DateTime dateTime) => dateTime.FourMonthPeriod() switch
+        public static int FirstMonthOfFourMonthPeriod(this DateTime dateTime)
         {
-            1 => 1,
-            2 => 5,
-            _ => 9
-        };
+            switch (dateTime.FourMonthPeriod())
+            {
+                case 1:
+                    return 1;
+                case 2:
+                    return 5;
+                default:
+                    return 9;
+            }
+        }
 
         /// <summary>
         /// Gets an enum representing the first month of the date corresponding four month period.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>An enum representing the first month of the date corresponding four month period.</returns>
-        public static MonthOfYear FirstMonthOfFourMonthPeriodOfYear(this DateTime dateTime) => dateTime.FourMonthPeriodOfYear() switch
+        public static MonthOfYear FirstMonthOfFourMonthPeriodOfYear(this DateTime dateTime)
         {
-            DateTimeEnums.FourMonthPeriodOfYear.First => DateTimeEnums.MonthOfYear.January,
-            DateTimeEnums.FourMonthPeriodOfYear.Second => DateTimeEnums.MonthOfYear.May,
-            _ => DateTimeEnums.MonthOfYear.September
-        };
+            switch (dateTime.FourMonthPeriodOfYear())
+            {
+                case DateTimeEnums.FourMonthPeriodOfYear.First:
+                    return DateTimeEnums.MonthOfYear.January;
+                case DateTimeEnums.FourMonthPeriodOfYear.Second:
+                    return DateTimeEnums.MonthOfYear.May;
+                default:
+                    return DateTimeEnums.MonthOfYear.September;
+            }
+        }
 
         /// <summary>
         /// Gets the ordinal number of the last month of the date corresponding four month period.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>An integer representing the ordinal number of the last month of the date corresponding four month period.</returns>
-        public static int LastMonthOfFourMonthPeriod(this DateTime dateTime) => dateTime.FourMonthPeriod() switch
+        public static int LastMonthOfFourMonthPeriod(this DateTime dateTime)
         {
-            1 => 4,
-            2 => 8,
-            _ => 12
-        };
+            switch (dateTime.FourMonthPeriod())
+            {
+                case 1:
+                    return 4;
+                case 2:
+                    return 8;
+                default:
+                    return 12;
+            }
+        }
 
         /// <summary>
         /// Gets an enum representing the last month of the date corresponding four month period.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>An enum representing the last month of the date corresponding four month period.</returns>
-        public static MonthOfYear LastMonthOfFourMonthPeriodOfYear(this DateTime dateTime) => dateTime.FourMonthPeriodOfYear() switch
+        public static MonthOfYear LastMonthOfFourMonthPeriodOfYear(this DateTime dateTime)
         {
-            DateTimeEnums.FourMonthPeriodOfYear.First => DateTimeEnums.MonthOfYear.April,
-            DateTimeEnums.FourMonthPeriodOfYear.Second => DateTimeEnums.MonthOfYear.August,
-            _ => DateTimeEnums.MonthOfYear.December
-        };
+            switch (dateTime.FourMonthPeriodOfYear())
+            {
+                case DateTimeEnums.FourMonthPeriodOfYear.First:
+                    return DateTimeEnums.MonthOfYear.April;
+                case DateTimeEnums.FourMonthPeriodOfYear.Second:
+                    return DateTimeEnums.MonthOfYear.August;
+                default:
+                    return DateTimeEnums.MonthOfYear.December;
+            }
+        }
 
         #endregion
     }

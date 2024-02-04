@@ -25,7 +25,7 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils
         /// <remarks>
         /// Remember to set or update this condition to let the utility methods consider it.
         /// </remarks>
-        public static Func<DateTime, bool>? LocalHolidayCondition;
+        public static Func<DateTime, bool> LocalHolidayCondition;
 
         #endregion
 
