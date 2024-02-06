@@ -117,6 +117,9 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils
         /// <exception cref="ArgumentException">Thrown when one or both of the provided dates' year is before 1946.</exception>
         public static IEnumerable<DateTime> GetItalianHolidaysInRange(DateTime startDate, DateTime endDate)
         {
+            startDate = startDate.Date;
+            endDate = endDate.Date;
+
             if (startDate > endDate)
             {
                 throw new ArgumentException($"{nameof(startDate)} cannot be after {nameof(endDate)}");

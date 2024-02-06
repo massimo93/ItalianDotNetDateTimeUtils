@@ -63,6 +63,9 @@ namespace DavideBorghi.ItalianDotNetDateTimeUtils
         /// - or when one or both of the provided dates' year is before 1946.</exception>
         public static int HowManyItalianWorkDaysBetweenDates(DateTime startDate, DateTime endDate, Func<DateTime, bool> workDaysCondition)
         {
+            startDate = startDate.Date;
+            endDate = endDate.Date;
+
             if (startDate > endDate)
             {
                 throw new ArgumentException($"{nameof(startDate)} cannot be after {nameof(endDate)}");
