@@ -10,7 +10,7 @@
 **Declaring Type:** [DateTimeHolidaysExtensions](../index.md)  
 **Namespace:** [DavideBorghi.ItalianDotNetDateTimeUtils](../../index.md)  
 **Assembly:** DavideBorghi.ItalianDotNetDateTimeUtils  
-**Assembly Version:** 2.0.0+47795d243b562f740038183afc91f1a19a4cde19
+**Assembly Version:** 2.0.0+8968417b34b75fc369cfc7d8f020d77fe99a2a50
 
 Tells if given date is Saints Peter and Paul Feast (i.e. June 29th until 1977 excluded).
 
