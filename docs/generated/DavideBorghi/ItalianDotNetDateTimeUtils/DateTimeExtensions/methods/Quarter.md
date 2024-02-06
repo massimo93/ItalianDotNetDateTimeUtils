@@ -10,7 +10,7 @@
 **Declaring Type:** [DateTimeExtensions](../index.md)  
 **Namespace:** [DavideBorghi.ItalianDotNetDateTimeUtils](../../index.md)  
 **Assembly:** DavideBorghi.ItalianDotNetDateTimeUtils  
-**Assembly Version:** 2.0.0+8968417b34b75fc369cfc7d8f020d77fe99a2a50
+**Assembly Version:** 2.0.0+f407b0806d34b707ff2fec8ad19788a17f0781d2
 
 Gets the ordinal number of the date corresponding quarter.
 

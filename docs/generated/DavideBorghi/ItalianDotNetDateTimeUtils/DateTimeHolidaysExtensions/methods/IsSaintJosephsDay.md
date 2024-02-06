@@ -10,7 +10,7 @@
 **Declaring Type:** [DateTimeHolidaysExtensions](../index.md)  
 **Namespace:** [DavideBorghi.ItalianDotNetDateTimeUtils](../../index.md)  
 **Assembly:** DavideBorghi.ItalianDotNetDateTimeUtils  
-**Assembly Version:** 2.0.0+8968417b34b75fc369cfc7d8f020d77fe99a2a50
+**Assembly Version:** 2.0.0+f407b0806d34b707ff2fec8ad19788a17f0781d2
 
 Tells if given date is Saint Joseph's Day (i.e. March 19th, until 1977 excluded).
 
