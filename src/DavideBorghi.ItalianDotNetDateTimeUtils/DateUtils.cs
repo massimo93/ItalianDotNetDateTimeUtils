@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace DavideBorghi.ItalianDotNetDateTimeUtils
 {
     /// <summary>
-    /// Provides simple static DateTime utility methods.
+    /// Provides simple static <see cref="DateTime"/> utility methods.
     /// </summary>
     public static class DateUtils
     {

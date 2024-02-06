@@ -4,14 +4,14 @@ using System;
 namespace DavideBorghi.ItalianDotNetDateTimeUtils
 {
     /// <summary>
-    /// Provides extension methods for DateTime, supporting equality check, week and weekends, days of months, quarters and four month periods.
+    /// Provides extension methods for <see cref="DateTime"/>, supporting equality check, week and weekends, days of months, quarters and four month periods.
     /// </summary>
     public static class DateTimeExtensions
     {
         #region Equals
 
         /// <summary>
-        /// Tells if two dates are equal by their Date property.
+        /// Tells if two dates are equal by their <see cref="DateTime.Date"/> property.
         /// </summary>
         /// <param name="firstDate">The first date to compare.</param>
         /// <param name="secondDate">The second date to compare.</param>
