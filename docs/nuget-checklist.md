@@ -26,4 +26,6 @@ and PACKAGE_VERSION (e.g: 2.0.0):
 
 5. Check if the new version of the package is already available on [NuGet](https://www.nuget.org/packages/DavideBorghi.ItalianDotNetDateTimeUtils/).
 
-6. Now, you deserve to enjoy your :coffee: or :tea: or :beer:!
+6. Update the [CHANGELOG](../CHANGELOG.md) file adding the new detailed entry.
+
+7. Now, you deserve to enjoy your :coffee: or :tea: or :beer:!
