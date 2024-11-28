@@ -1,7 +1,6 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
-Note that
 
 ## 1.0.0 - Unreleased
 Initial release based on a fork of the [original project](https://github.com/davideborghi/ItalianDotNetDateTimeUtils).
