@@ -1,9 +1,10 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
+Note that
 
-## Unreleased
-Upgrade to .NET Standard 2.0 and include a relevant overall refactoring.
+## 1.0.0 - Unreleased
+Initial release based on a fork of the [original project](https://github.com/davideborghi/ItalianDotNetDateTimeUtils).
 
 ### Added
 - Migration to **[.NET Standard 2.0](https://learn.microsoft.com/dotnet/standard/net-standard?tabs=net-standard-2-0)**;
@@ -19,15 +20,3 @@ Upgrade to .NET Standard 2.0 and include a relevant overall refactoring.
 
 ### Removed
 - APIs using the Italian language as method name.
-
-## [1.0.2](https://www.nuget.org/packages/DavideBorghi.ItalianDotNetDateTimeUtils/1.0.2) - 2022-07-11
-Add support to _trimestri_ (quarters) and _quadrimestri_ (four month periods).
-
-## [1.0.1](https://www.nuget.org/packages/DavideBorghi.ItalianDotNetDateTimeUtils/1.0.1) - 2021-06-15
-Add calculation of the last-n working days.
-
-## [1.0.0](https://www.nuget.org/packages/DavideBorghi.ItalianDotNetDateTimeUtils/1.0.0) - 2021-02-07
-No release notes.
-
-## [0.0.0.1](https://www.nuget.org/packages/DavideBorghi.ItalianDotNetDateTimeUtils/0.0.0.1) - 2021-01-25
-Initial release
