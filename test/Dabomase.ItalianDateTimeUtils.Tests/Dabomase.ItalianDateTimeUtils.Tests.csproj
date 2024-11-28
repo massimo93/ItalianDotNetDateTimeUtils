@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../src/DavideBorghi.ItalianDotNetDateTimeUtils/DavideBorghi.ItalianDotNetDateTimeUtils.csproj" />
+    <ProjectReference Include="..\..\src\Dabomase.ItalianDateTimeUtils\Dabomase.ItalianDateTimeUtils.csproj" />
   </ItemGroup>
 
 </Project>

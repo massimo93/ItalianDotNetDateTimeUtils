@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DavideBorghi.ItalianDotNetDateTimeUtils
+namespace Dabomase.ItalianDateTimeUtils
 {
     /// <summary>
     /// Provides simple static <see cref="DateTime"/> utility methods.

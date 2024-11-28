@@ -1,7 +1,7 @@
-﻿using DavideBorghi.ItalianDotNetDateTimeUtils.DateTimeEnums;
+﻿using Dabomase.ItalianDateTimeUtils.DateTimeEnums;
 using System;
 
-namespace DavideBorghi.ItalianDotNetDateTimeUtils
+namespace Dabomase.ItalianDateTimeUtils
 {
     /// <summary>
     /// Provides extension methods for <see cref="DateTime"/>, supporting equality check, week and weekends, days of months, quarters and four month periods.

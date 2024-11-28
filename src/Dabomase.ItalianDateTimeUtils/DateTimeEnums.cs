@@ -1,4 +1,4 @@
-﻿namespace DavideBorghi.ItalianDotNetDateTimeUtils.DateTimeEnums
+﻿namespace Dabomase.ItalianDateTimeUtils.DateTimeEnums
 {
     /// <summary>
     /// Enum class representing months.

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DavideBorghi.ItalianDotNetDateTimeUtils
+namespace Dabomase.ItalianDateTimeUtils
 {
     /// <summary>
     /// Provides extension methods when working with <see cref="DateTime"/> objects related to national holidays.

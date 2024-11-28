@@ -1,4 +1,4 @@
-﻿namespace DavideBorghi.ItalianDotNetDateTimeUtils.Tests.UnitTests;
+﻿namespace Dabomase.ItalianDateTimeUtils.Tests.UnitTests;
 
 public sealed class DateTimeWeekExtensionsTests
 {

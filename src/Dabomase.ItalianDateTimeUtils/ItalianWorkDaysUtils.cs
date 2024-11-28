@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DavideBorghi.ItalianDotNetDateTimeUtils
+namespace Dabomase.ItalianDateTimeUtils
 {
     /// <summary>
     /// Provides static utility methods when dealing with Italian work days calculations.

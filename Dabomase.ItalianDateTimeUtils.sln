@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1F9E5E8F-FDF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{AAF8B5EB-16A5-4259-8DC0-31DA1D87C9CA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DavideBorghi.ItalianDotNetDateTimeUtils", "src\DavideBorghi.ItalianDotNetDateTimeUtils\DavideBorghi.ItalianDotNetDateTimeUtils.csproj", "{B8A8CF70-F6A0-42EC-A1A3-1171F735C41B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dabomase.ItalianDateTimeUtils", "src\Dabomase.ItalianDateTimeUtils\Dabomase.ItalianDateTimeUtils.csproj", "{B8A8CF70-F6A0-42EC-A1A3-1171F735C41B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DavideBorghi.ItalianDotNetDateTimeUtils.Tests", "test\DavideBorghi.ItalianDotNetDateTimeUtils.Tests\DavideBorghi.ItalianDotNetDateTimeUtils.Tests.csproj", "{62D5BBE4-F5AD-4D6E-BC0B-1552292FD3CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dabomase.ItalianDateTimeUtils.Tests", "test\Dabomase.ItalianDateTimeUtils.Tests\Dabomase.ItalianDateTimeUtils.Tests.csproj", "{62D5BBE4-F5AD-4D6E-BC0B-1552292FD3CD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{429205B5-E20F-46F7-B241-FB00DAC3293F}"
 	ProjectSection(SolutionItems) = preProject

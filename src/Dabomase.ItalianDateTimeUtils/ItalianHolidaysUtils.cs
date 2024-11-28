@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DavideBorghi.ItalianDotNetDateTimeUtils
+namespace Dabomase.ItalianDateTimeUtils
 {
     /// <summary>
     /// Provides static utility methods when working with Italian holidays checks.
