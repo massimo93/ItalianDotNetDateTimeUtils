@@ -1,10 +1,10 @@
-# Davide Borghi's ItalianDotNetDateTimeUtils
+# dabomase-italian-datetime-utils
 
 ## Introduction
 
 ### Hello everybody!
 
-My name is __ItalianDotNetDateTimeUtils__ and I'm a class library written by [Davide Borghi](https://www.linkedin.com/in/davide-borghi-87364014a/). 
+My name is __Dabomase.ItalianDateTimeUtils__ and I'm a class library originally written by [Davide Borghi](https://www.linkedin.com/in/davide-borghi-87364014a/). 
 He wrote me because he was bored to copy and paste a static class in every project he was working on.
 
 Another stubborn developer, [Massimo Serra](https://www.linkedin.com/in/massimo-serra/), also decided to support Davide with my code.
@@ -15,7 +15,7 @@ As a humble, simple and pluggable .NET Standard 2.0 utility library, my role is 
 
 For this reason, please, feel free to file comments, open issues and, if you want, even fork my code and open pull requests: only bear in mind to check my open source licence to be nice with me.
 
-You can find me on **[NuGet](https://www.nuget.org/packages/DavideBorghi.ItalianDotNetDateTimeUtils)**!
+You can find me on **[NuGet](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils)**!
 
 And by the way, if you want to know me better, [here's my changelog](CHANGELOG.md).
 
@@ -25,13 +25,13 @@ And by the way, if you want to know me better, [here's my changelog](CHANGELOG.m
 
 The library uses .NET Standard 2.0 to support both .NET Framework and .NET (Core).
 
-You should install the latest version [via NuGet](https://www.nuget.org/packages/DavideBorghi.ItalianDotNetDateTimeUtils):
+You should install the latest version [via NuGet](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils):
 
-    Install-Package DavideBorghi.ItalianDotNetDateTimeUtils
+    Install-Package Dabomase.ItalianDateTimeUtils
     
 Or via the .NET Core command line interface:
 
-    dotnet add package DavideBorghi.ItalianDotNetDateTimeUtils
+    dotnet add package Dabomase.ItalianDateTimeUtils
 
 ### New user documentation
 You can find generated markdown files documenting the available APIs [here](docs/generated/DavideBorghi/index.md).
