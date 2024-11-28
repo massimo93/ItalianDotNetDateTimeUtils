@@ -10,7 +10,7 @@
 **Declaring Type:** [DateTimeHolidaysExtensions](../index.md)  
 **Namespace:** [Dabomase.ItalianDateTimeUtils](../../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
-**Assembly Version:** 1.0.0+8eaba73c98917213cc0fd608d4ce69e131cdeb6a
+**Assembly Version:** 1.0.0+77f883078dff981886ae74fdd13db47c773d4cbc
 
 Tells if given date is Christmas Day (i.e. December 25th).
 

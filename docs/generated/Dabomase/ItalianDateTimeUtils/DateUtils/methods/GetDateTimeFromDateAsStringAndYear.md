@@ -10,7 +10,7 @@
 **Declaring Type:** [DateUtils](../index.md)  
 **Namespace:** [Dabomase.ItalianDateTimeUtils](../../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
-**Assembly Version:** 1.0.0+8eaba73c98917213cc0fd608d4ce69e131cdeb6a
+**Assembly Version:** 1.0.0+77f883078dff981886ae74fdd13db47c773d4cbc
 
 Gets the date time from a date formatted as string plus the year as an integer.
 
