@@ -9,7 +9,7 @@
 
 **Namespace:** [Dabomase.ItalianDateTimeUtils.DateTimeEnums](../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
-**Assembly Version:** 1.0.0+77f883078dff981886ae74fdd13db47c773d4cbc
+**Assembly Version:** 1.0.0+a948ad020c4c4c23134f57cb710e90be8ee4e29f
 
 Enum class encapsulating quarters of the year.
 
