@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 1.0.0 - Unreleased
+## [1.0.0](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils/1.0.0) - 2024-11-29
 Initial release based on a fork of the [original project](https://github.com/davideborghi/ItalianDotNetDateTimeUtils).
 
 ### Added

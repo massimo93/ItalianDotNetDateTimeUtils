@@ -34,7 +34,7 @@ Or via the .NET Core command line interface:
     dotnet add package Dabomase.ItalianDateTimeUtils
 
 ### New user documentation
-You can find generated markdown files documenting the available APIs [here](docs/generated/DavideBorghi/index.md).
+You can find generated markdown files documenting the available APIs [here](docs/generated/Dabomase/index.md).
 
 ## Maintainers' guide
 
