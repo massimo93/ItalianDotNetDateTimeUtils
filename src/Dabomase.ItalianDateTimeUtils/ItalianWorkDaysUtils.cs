@@ -77,7 +77,9 @@ namespace Dabomase.ItalianDateTimeUtils
             while (currentDate <= endDate)
             {
                 if (workDaysCondition(currentDate) && !ItalianHolidaysUtils.IsHoliday(currentDate))
+                {
                     workDaysCount++;
+                }
                 currentDate = currentDate.AddDays(1);
             }
 
