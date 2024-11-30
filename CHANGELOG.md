@@ -2,8 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.0](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils/1.0.0) - 2024-11-29
-Initial release based on a fork of the [original project](https://github.com/davideborghi/ItalianDotNetDateTimeUtils).
+## [1.0.3](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils/1.0.3) - 2024-11-30
+Initial publicly available release based on a fork of the [original project](https://github.com/davideborghi/ItalianDotNetDateTimeUtils).
 
 ### Added
 - Migration to **[.NET Standard 2.0](https://learn.microsoft.com/dotnet/standard/net-standard?tabs=net-standard-2-0)**;
