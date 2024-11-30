@@ -13,7 +13,7 @@ As a humble, simple and pluggable .NET Standard 2.0 utility library, my role is 
 
 **Even if I have a good set of unit tests, my developers are committed to extend my features and documentation too, so be patient with me, I promise, they're working hard on these things in their spare time!**
 
-For this reason, please, feel free to file comments, open issues and, if you want, even fork my code and open pull requests: only bear in mind to check my open source licence to be nice with me.
+For this reason, please, feel free to file comments, open issues and, if you want, even fork my code and open pull requests: only bear in mind to check my open source license to be nice with me.
 
 You can find me on **[NuGet](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils)**!
 
