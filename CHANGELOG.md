@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils/1.0.4) - 2024-11-30
+Update licence acceptance terms
+
+### Changed
+- Ask user to accept the licence terms when installing and using the library.
+
 ## [1.0.3](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils/1.0.3) - 2024-11-30
 Initial publicly available release based on a fork of the [original project](https://github.com/davideborghi/ItalianDotNetDateTimeUtils).
 

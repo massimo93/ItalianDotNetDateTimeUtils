@@ -2,12 +2,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Dabomase.ItalianDateTimeUtils</AssemblyName>
-    <Version>1.0.3</Version>
-    <PackageReleaseNotes>Initial publicly available release</PackageReleaseNotes>
+    <Version>1.0.4</Version>
+    <PackageReleaseNotes>Update licence acceptance terms</PackageReleaseNotes>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Description>Simple and pluggable utilities library that aims to help Italian developers or any developer who need support when dealing with Italian holidays and work days calculations.</Description>
     <Authors>Davide Borghi (Dabo) and Massimo Serra (mase)</Authors>
     <PackageProjectUrl>https://github.com/massimo93/dabomase-italian-datetime-utils</PackageProjectUrl>
+    <RequireLicenseAcceptance>true</RequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Copyright 2024</Copyright>
