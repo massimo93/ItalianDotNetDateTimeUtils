@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.5](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils/1.0.4) - 2024-11-30
+## [1.0.5](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils/1.0.5) - 2024-11-30
 Update license acceptance terms
 
 ### Changed
