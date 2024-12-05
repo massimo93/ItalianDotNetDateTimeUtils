@@ -17,7 +17,7 @@ For this reason, please, feel free to file comments, open issues and, if you wan
 
 You can find me on **[NuGet](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils)**!
 
-And by the way, if you want to know me better, [here's my changelog](CHANGELOG.md).
+And by the way, if you want to know me better, [here's my changelog](https://github.com/massimo93/dabomase-italian-datetime-utils/blob/develop/CHANGELOG.md).
 
 ## Developers' guide
 
@@ -34,14 +34,15 @@ Or via the .NET Core command line interface:
     dotnet add package Dabomase.ItalianDateTimeUtils
 
 ### New user documentation
-You can find generated markdown files documenting the available APIs [here](docs/generated/Dabomase/index.md).
+You can find generated markdown files documenting the available APIs [here](https://github.com/massimo93/dabomase-italian-datetime-utils/blob/develop/docs/generated/Dabomase/ItalianDateTimeUtils/index.md).
 
 ## Maintainers' guide
 
 ### In short
-Maintainers can find under the [docs](docs) directory the following files:
-1. [NuGet checklist](docs/nuget-checklist.md) to help them pack and release a new version of the NuGet package;
-2. [Docs generation checklist](docs/docs-generation-checklist.md) to guide them generate documents from code using an open source CLI tool.
+Maintainers can find under the [docs](https://github.com/massimo93/dabomase-italian-datetime-utils/tree/develop/docs) directory the following files:
+1. [NuGet checklist](https://github.com/massimo93/dabomase-italian-datetime-utils/blob/develop/docs/nuget-checklist.md) to help them pack and release a new version of the NuGet package;
+2. [Docs generation checklist](https://github.com/massimo93/dabomase-italian-datetime-utils/blob/develop/docs/docs-generation-checklist.md) to guide them generate documents from code using an open source CLI tool.
+3. [Generated docs' parent folder](https://github.com/massimo93/dabomase-italian-datetime-utils/tree/develop/docs/generated).
 
 ### Code of conduct
-Currently used code of conduct can be found [here](CODE_OF_CONDUCT.md).
+Currently used code of conduct can be found [here](https://github.com/massimo93/dabomase-italian-datetime-utils/blob/develop/CODE_OF_CONDUCT.md).
