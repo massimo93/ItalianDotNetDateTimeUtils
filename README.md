@@ -50,8 +50,9 @@ bool isHoliday = ItalianHolidaysUtils.IsHoliday(new DateTime(2024, 1, 1));
 ```
 or you want me to list all yearly Italian holidays or from a selected `DateTime` range:
 ```cs
-var 2024_holidays = ItalianHolidaysUtils.GetYearlyItalianHolidays(2024);
-var holidaysInRange = ItalianHolidaysUtils.GetItalianHolidaysInRange(new DateTime(2024, 3, 15), new DateTime(2024, 12, 15));
+var italianHolidaysFor2024 = ItalianHolidaysUtils.GetYearlyItalianHolidays(2024);
+var italianHolidaysInRange = 
+    ItalianHolidaysUtils.GetItalianHolidaysInRange(new DateTime(2024, 3, 15), new DateTime(2025, 12, 15));
 ```
 
 When it comes to work days calculations, I can either calculate the number of office days given two dates:
@@ -59,17 +60,25 @@ When it comes to work days calculations, I can either calculate the number of of
 var startDate = new DateTime(2024, 7, 16);
 var endDate = new DateTime(2024, 12, 15);
 
-var italianOfficeDaysInRangeCount = ItalianWorkDaysUtils.HowManyItalianOfficeDaysBetweenDates(startDate, endDate);
+var italianOfficeDaysInRangeCount = 
+    ItalianWorkDaysUtils.HowManyItalianOfficeDaysBetweenDates(startDate, endDate);
 ```
 or even use `Func` to specify what kind of work days condition you want, either built-in or your own; let me show you:
 ```cs
 var startDate = new DateTime(2024, 7, 16);
 var endDate = new DateTime(2024, 12, 15);
 
-var officeDaysCount = ItalianWorkDaysUtils.HowManyItalianOfficeDaysBetweenDates(startDate, endDate);
-var workDaysCount_1 = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.ExcludeSundaysCondition);
-var workDaysCount_2 = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.IncludeOnlyEvenDaysCondition);
-var workDaysCount_3 = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, date => true);
+var italianOfficeDaysInRangeCount = 
+    ItalianWorkDaysUtils.HowManyItalianOfficeDaysBetweenDates(startDate, endDate);
+
+var workDaysInRangeExcludingSundaysCount = 
+    ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.ExcludeSundaysCondition);
+
+var evenWorkDaysInRangeCount = 
+    ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.IncludeOnlyEvenDaysCondition);
+
+var allDaysAsWorkingDaysInRangeCount = 
+    ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, date => true);
 ```
 
 ### Full user documentation

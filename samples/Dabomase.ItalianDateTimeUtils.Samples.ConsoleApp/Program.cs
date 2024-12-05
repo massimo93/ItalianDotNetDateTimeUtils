@@ -11,7 +11,7 @@ var wasLastNovemberTheFirstItalianHoliday = ItalianHolidaysUtils.IsHoliday(new D
 
 //Get holidays
 var italianHolidaysFor2024 = ItalianHolidaysUtils.GetYearlyItalianHolidays(2024);
-var italianHolidaysInRange = ItalianHolidaysUtils.GetItalianHolidaysInRange(new DateTime(2024, 3, 15), new DateTime(2024, 12, 15));
+var italianHolidaysInRange = ItalianHolidaysUtils.GetItalianHolidaysInRange(new DateTime(2024, 3, 15), new DateTime(2025, 12, 15));
 
 //Get work days
 var startDate = new DateTime(2024, 7, 16);
@@ -38,7 +38,7 @@ foreach (var holiday in italianHolidaysInRange)
     Console.WriteLine(holiday.Date.ToString("yyyy-M-d dddd"));
 }
 
-Console.WriteLine($"\n No. of Italian office days in given range: {italianOfficeDaysInRangeCount}");
+Console.WriteLine($"\nNo. of Italian office days in given range: {italianOfficeDaysInRangeCount}");
 Console.WriteLine($"No. of Italian work days excluding Sundays in given range: {workDaysInRangeExcludingSundaysCount}");
 Console.WriteLine($"No. of Italian even work days in given range: {evenWorkDaysInRangeCount}");
 Console.WriteLine($"No. of Italian all work days in given range: {allDaysAsWorkingDaysInRangeCount}");
