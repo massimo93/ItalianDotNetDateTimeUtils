@@ -18,9 +18,9 @@ var startDate = new DateTime(2024, 7, 16);
 var endDate = new DateTime(2024, 12, 15);
 
 var italianOfficeDaysInRangeCount = ItalianWorkDaysUtils.HowManyItalianOfficeDaysBetweenDates(startDate, endDate);
-var workDaysInRangeExcludingSundaysCount = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.ExcludeSundaysCondition);
-var evenWorkDaysInRangeCount = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.IncludeOnlyEvenDaysCondition);
-var allDaysAsWorkingDaysInRangeCount = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, date => true);
+var workDaysInRangeExcludingSundaysCount = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, workDaysCondition: ItalianWorkDaysUtils.ExcludeSundaysCondition);
+var evenWorkDaysInRangeCount = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, workDaysCondition: ItalianWorkDaysUtils.IncludeOnlyEvenDaysCondition);
+var allDaysAsWorkingDaysInRangeCount = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, workDaysCondition: date => true);
 
 //Console printouts
 Console.WriteLine($"{nameof(isTodayItalianHoliday)}: {isTodayItalianHoliday}");

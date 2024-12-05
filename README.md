@@ -50,9 +50,11 @@ bool isHoliday = ItalianHolidaysUtils.IsHoliday(new DateTime(2024, 1, 1));
 ```
 or you want me to list all yearly Italian holidays or from a selected `DateTime` range:
 ```cs
+var startDate = new DateTime(2024, 3, 15);
+var endDate = new DateTime(2025, 12, 15);
+
 var italianHolidaysFor2024 = ItalianHolidaysUtils.GetYearlyItalianHolidays(2024);
-var italianHolidaysInRange = 
-    ItalianHolidaysUtils.GetItalianHolidaysInRange(new DateTime(2024, 3, 15), new DateTime(2025, 12, 15));
+var italianHolidaysInRange = ItalianHolidaysUtils.GetItalianHolidaysInRange(startDate, endDate);
 ```
 
 When it comes to work days calculations, I can either calculate the number of office days given two dates:
@@ -72,18 +74,26 @@ var italianOfficeDaysInRangeCount =
     ItalianWorkDaysUtils.HowManyItalianOfficeDaysBetweenDates(startDate, endDate);
 
 var workDaysInRangeExcludingSundaysCount = 
-    ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.ExcludeSundaysCondition);
+    ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(
+        startDate, endDate, 
+        workDaysCondition: ItalianWorkDaysUtils.ExcludeSundaysCondition);
 
 var evenWorkDaysInRangeCount = 
-    ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.IncludeOnlyEvenDaysCondition);
+    ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(
+        startDate, endDate, 
+        workDaysCondition: ItalianWorkDaysUtils.IncludeOnlyEvenDaysCondition);
 
 var allDaysAsWorkingDaysInRangeCount = 
-    ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, date => true);
+    ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(
+        startDate, endDate, 
+        workDaysCondition: date => true);
 ```
 
 ### Full user documentation
 You can find generated markdown files documenting the available APIs [here](https://github.com/massimo93/dabomase-italian-datetime-utils/blob/develop/docs/generated/Dabomase/ItalianDateTimeUtils/index.md) to foresee more advanced use cases and utilities.
+
 Keep also in mind to regularly check my [GitHub repo](https://github.com/massimo93/dabomase-italian-datetime-utils) to see if me developers either packed a new release version or added new use case samples.
+
 Feel free to take a look at the tests project to further explore what I can do for you with real world data sets.
 
 ## Maintainers' guide
