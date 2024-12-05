@@ -33,15 +33,56 @@ Or via the .NET Core command line interface:
 
     dotnet add package Dabomase.ItalianDateTimeUtils
 
-### New user documentation
-You can find generated markdown files documenting the available APIs [here](https://github.com/massimo93/dabomase-italian-datetime-utils/blob/develop/docs/generated/Dabomase/ItalianDateTimeUtils/index.md).
+### A general overview
+These are the main utility static classes:
+- `DateUtils.cs` provides `DateTime` general purpose utility methods;
+- `ItalianHolidaysUtils.cs` has methods to work with Italian holidays checks;
+- `ItalianWorkDaysUtils.cs` gives you methods to deal with Italian work days calculations.
+
+While the following classes offers custom extensions to the `DateTime` type:
+- `DateTimeExtensions.cs` supports equality check, week and weekends, days of months, quarters and four-month periods;
+- `DateTimeHolidaysExtensions.cs` adds to the `DateTime` simple boolean methods to check if given date is an Italian holiday or not.
+
+### A quick start
+Let's say you want me to check if a given date is an Italian holiday:
+```cs
+bool isHoliday = ItalianHolidaysUtils.IsHoliday(new DateTime(2024, 1, 1));
+```
+or you want me to list all yearly Italian holidays or from a selected `DateTime` range:
+```cs
+var italianHolidaysFor2024 = ItalianHolidaysUtils.GetYearlyItalianHolidays(2024);
+var italianHolidaysInRange = ItalianHolidaysUtils.GetItalianHolidaysInRange(new DateTime(2024, 3, 15), new DateTime(2024, 12, 15));
+```
+
+When it comes to work days calculations, I can either calculate the number of office days given two dates:
+```cs
+var startDate = new DateTime(2024, 7, 16);
+var endDate = new DateTime(2024, 12, 15);
+
+var italianOfficeDaysInRangeCount = ItalianWorkDaysUtils.HowManyItalianOfficeDaysBetweenDates(startDate, endDate);
+```
+or even use `Func` to specify what kind of work days condition you want, either built-in or your own; let me show you:
+```cs
+var startDate = new DateTime(2024, 7, 16);
+var endDate = new DateTime(2024, 12, 15);
+
+var italianOfficeDaysInRangeCount = ItalianWorkDaysUtils.HowManyItalianOfficeDaysBetweenDates(startDate, endDate);
+var workDaysInRangeExcludingSundaysCount = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.ExcludeSundaysCondition);
+var evenWorkDaysInRangeCount = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.IncludeOnlyEvenDaysCondition);
+var allDaysAsWorkingDaysInRangeCount = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, date => true);
+```
+
+### Full user documentation
+You can find generated markdown files documenting the available APIs [here](https://github.com/massimo93/dabomase-italian-datetime-utils/blob/develop/docs/generated/Dabomase/ItalianDateTimeUtils/index.md) to foresee more advanced use cases and utilities.
+Keep also in mind to regularly check my [GitHub repo](https://github.com/massimo93/dabomase-italian-datetime-utils) to see if me developers either packed a new release version or added new use case samples.
+Feel free to take a look at the tests project to further explore what I can do for you with real world data sets.
 
 ## Maintainers' guide
 
 ### In short
 Maintainers can find under the [docs](https://github.com/massimo93/dabomase-italian-datetime-utils/tree/develop/docs) directory the following files:
 1. [NuGet checklist](https://github.com/massimo93/dabomase-italian-datetime-utils/blob/develop/docs/nuget-checklist.md) to help them pack and release a new version of the NuGet package;
-2. [Docs generation checklist](https://github.com/massimo93/dabomase-italian-datetime-utils/blob/develop/docs/docs-generation-checklist.md) to guide them generate documents from code using an open source CLI tool.
+2. [Docs generation checklist](https://github.com/massimo93/dabomase-italian-datetime-utils/blob/develop/docs/docs-generation-checklist.md) to guide them generate documents from code using an open source CLI tool;
 3. [Generated docs' parent folder](https://github.com/massimo93/dabomase-italian-datetime-utils/tree/develop/docs/generated).
 
 ### Code of conduct
