@@ -75,18 +75,37 @@ namespace Dabomase.ItalianDateTimeUtils
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>True if given date is Italian Late Modern Period Workers' Day; otherwise, false.</returns>
-        internal static bool IsLateModernPeriodWorkersDay(this DateTime dateTime)
+        internal static bool IsLateModernPeriodItalianWorkersDay(this DateTime dateTime)
             => dateTime.Month == 5 && dateTime.Day == 1 && dateTime.Year >= 1945;
-
+        
         /// <summary>
         /// Tells if given date is Italian Workers' Day:
-        /// from 1890 this day has been celebrated on May 1th during Late Modern Period,
+        /// from 1890 this day has been celebrated on May 1st during Late Modern Period,
         /// or during City of Rome foundation celebration day (i.e. April 21st, from 1924 to 1944, both included).
         /// </summary>
         /// <param name="dateTime">The given date.</param>
         /// <returns>True if given date is Italian Workers' Day; otherwise, false.</returns>
+        /// <remarks>
+        /// This method is obsolete. Use <see cref="IsItalianWorkersDay"/> instead.
+        /// It's retained for backward compatibility and will be removed in a future version.
+        /// </remarks>
+        [Obsolete("Use '" + nameof(IsItalianWorkersDay) + "' instead. " +
+                  "This method is retained for backward compatibility and will be removed in a future version.")]
         public static bool IsWorkersDay(this DateTime dateTime)
-            => dateTime.Year >= 1890 && (dateTime.IsLateModernPeriodWorkersDay() || dateTime.WasDuringRomeBirthday());
+            => dateTime.IsItalianWorkersDay();
+        
+        /// <summary>
+        /// Tells if given date is Italian Workers' Day:
+        /// from 1890 this day has been celebrated on May 1st during Late Modern Period,
+        /// or during City of Rome foundation celebration day (i.e. April 21st, from 1924 to 1944, both included).
+        /// </summary>
+        /// <param name="dateTime">The given date.</param>
+        /// <returns>True if given date is Italian Workers' Day; otherwise, false.</returns>
+        /// <remarks>
+        /// The updated method that replaces <see cref="IsWorkersDay"/>.
+        /// </remarks>
+        public static bool IsItalianWorkersDay(this DateTime dateTime)
+            => dateTime.Year >= 1890 && (dateTime.IsLateModernPeriodItalianWorkersDay() || dateTime.WasDuringRomeBirthday());
 
         #endregion
 

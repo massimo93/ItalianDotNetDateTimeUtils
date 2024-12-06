@@ -56,7 +56,7 @@ namespace Dabomase.ItalianDateTimeUtils
                     && (date.EqualsByDate(yearlyEaster.AddDays(AscensionOfJesusDaysCountFromEaster)) 
                         || date.EqualsByDate(yearlyEaster.AddDays(FeastOfCorpusChristiDaysCountAfterEaster))))
                 || date.IsItalianLiberationDay()
-                || date.IsWorkersDay()
+                || date.IsItalianWorkersDay()
                 || date.IsItalianRepublicDay()
                 || date.IsSaintsPeterAndPaulFeast()
                 || date.IsAssumptionOfMaryDay()

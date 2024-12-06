@@ -335,7 +335,7 @@ public sealed class NationalHolidaysExtensionsTests
         DateTime date = new(1945, 5, 1);
 
         // Act
-        bool result = date.IsLateModernPeriodWorkersDay();
+        bool result = date.IsLateModernPeriodItalianWorkersDay();
 
         // Assert
         Assert.True(result);
@@ -348,7 +348,7 @@ public sealed class NationalHolidaysExtensionsTests
         DateTime date = new(1950, 5, 1);
 
         // Act
-        bool result = date.IsLateModernPeriodWorkersDay();
+        bool result = date.IsLateModernPeriodItalianWorkersDay();
 
         // Assert
         Assert.True(result);
@@ -361,7 +361,7 @@ public sealed class NationalHolidaysExtensionsTests
         DateTime date = new(1960, 6, 15);
 
         // Act
-        bool result = date.IsLateModernPeriodWorkersDay();
+        bool result = date.IsLateModernPeriodItalianWorkersDay();
 
         // Assert
         Assert.False(result);
@@ -374,7 +374,7 @@ public sealed class NationalHolidaysExtensionsTests
         DateTime date = new(1944, 5, 1);
 
         // Act
-        bool result = date.IsLateModernPeriodWorkersDay();
+        bool result = date.IsLateModernPeriodItalianWorkersDay();
 
         // Assert
         Assert.False(result);
@@ -387,7 +387,7 @@ public sealed class NationalHolidaysExtensionsTests
         DateTime date = new(2024, 5, 1);
 
         // Act
-        bool result = date.IsLateModernPeriodWorkersDay();
+        bool result = date.IsLateModernPeriodItalianWorkersDay();
 
         // Assert
         Assert.True(result);
@@ -400,7 +400,7 @@ public sealed class NationalHolidaysExtensionsTests
         DateTime date = new(1945, 5, 1);
 
         // Act
-        bool result = date.IsWorkersDay();
+        bool result = date.IsItalianWorkersDay();
 
         // Assert
         Assert.True(result);
@@ -413,7 +413,7 @@ public sealed class NationalHolidaysExtensionsTests
         DateTime date = new(1950, 5, 1);
 
         // Act
-        bool result = date.IsWorkersDay();
+        bool result = date.IsItalianWorkersDay();
 
         // Assert
         Assert.True(result);
@@ -426,7 +426,7 @@ public sealed class NationalHolidaysExtensionsTests
         DateTime date = new(1924, 4, 21);
 
         // Act
-        bool result = date.IsWorkersDay();
+        bool result = date.IsItalianWorkersDay();
 
         // Assert
         Assert.True(result);
@@ -439,7 +439,7 @@ public sealed class NationalHolidaysExtensionsTests
         DateTime date = new(1960, 6, 15);
 
         // Act
-        bool result = date.IsWorkersDay();
+        bool result = date.IsItalianWorkersDay();
 
         // Assert
         Assert.False(result);
@@ -452,7 +452,7 @@ public sealed class NationalHolidaysExtensionsTests
         DateTime date = new(1889, 5, 1);
 
         // Act
-        bool result = date.IsWorkersDay();
+        bool result = date.IsItalianWorkersDay();
 
         // Assert
         Assert.False(result);
@@ -470,7 +470,7 @@ public sealed class NationalHolidaysExtensionsTests
         DateTime date = new(year, month, day);
 
         // Act
-        bool result = date.IsWorkersDay();
+        bool result = date.IsItalianWorkersDay();
 
         // Assert
         Assert.Equal(expected, result);
