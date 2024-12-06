@@ -24,7 +24,7 @@ namespace Dabomase.ItalianDateTimeUtils
         #region Day
 
         /// <summary>
-        /// Tells if the day of a given date is week end or not.
+        /// Tells if the day of a given date is weekend or not.
         /// </summary>
         /// <param name="dateTime">The given date time.</param>
         /// <returns>A boolean value representing if the date of the given date is week end or not.</returns>
@@ -48,11 +48,11 @@ namespace Dabomase.ItalianDateTimeUtils
         }
 
         /// <summary>
-        /// Gets the date of the week end (Monday set as default week start day) of the given date.
+        /// Gets the date of the weekend (Monday set as default week start day) of the given date.
         /// </summary>
         /// <param name="dateTime">The given date time.</param>
         /// <param name="startOfWeek">The start day of the week, Monday set as default.</param>
-        /// <returns>The date of the week end of the given date.</returns>
+        /// <returns>The date of the weekend of the given date.</returns>
         public static DateTime EndOfWeek(this DateTime dateTime, DayOfWeek startOfWeek = DayOfWeek.Monday)
             => StartOfWeek(dateTime, startOfWeek).AddDays(6.0);
 

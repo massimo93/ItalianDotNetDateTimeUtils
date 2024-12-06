@@ -31,10 +31,10 @@ namespace Dabomase.ItalianDateTimeUtils
 
         /// <summary>
         /// Tells if given date is the Anniversary of the Unification Of Italy:
-        /// this official celebration occurres on March 17th and every 50 years from 1961 included.
+        /// this official celebration occurs on March 17th and every 50 years from 1961 included.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
-        /// <returns>True if given date is is the Anniversary of the Unification Of Italy; otherwise, false.</returns>
+        /// <returns>True if given date is the Anniversary of the Unification Of Italy; otherwise, false.</returns>
         public static bool IsAnniversaryOfTheUnificationOfItalyDayOfficiallyCelebrated(this DateTime dateTime)
             => dateTime.Month == 3 && dateTime.Day == 17 && dateTime.Year >= 1961 && (dateTime.Year - 1961) % 50 == 0;
         
