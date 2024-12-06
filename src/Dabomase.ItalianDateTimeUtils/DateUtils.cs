@@ -18,7 +18,6 @@ namespace Dabomase.ItalianDateTimeUtils
         /// <returns>The day in DateTime format.</returns>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when:
         /// - provided day or month part of given date as string are not in a valid range;
-        /// - or when given year value is less than System.Int32.MinValue or greater than System.Int32.MaxValue;
         /// - or when the corresponding DateTime is not valid.</exception>
         ///<exception cref="ArgumentNullException">Thrown when provided day or month part of given date as string are null or empty.</exception>
         ///<exception cref="FormatException">Thrown when provided day or month part of given date as string are not in the correct integer format.</exception>
@@ -26,13 +25,9 @@ namespace Dabomase.ItalianDateTimeUtils
         ///result in a value less than System.Int32.MinValue or greater than System.Int32.MaxValue.</exception>
         public static DateTime GetDateTimeFromDateAsStringAndYear(string dateAsString, int year)
         {
-            if (year < Int32.MinValue || year > Int32.MaxValue)
-            {
-                throw new ArgumentOutOfRangeException($"Given '{nameof(year)}' value is out of allowed range");
-            }
             if (string.IsNullOrWhiteSpace(dateAsString))
             {
-                throw new ArgumentNullException($"Given '{nameof(dateAsString)}' is null or consists only in white-space characters");
+                throw new ArgumentNullException(nameof(dateAsString), $"Given '{nameof(dateAsString)}' is null or consists only in white-space characters");
             }
 
             dateAsString = dateAsString.Trim();
@@ -40,13 +35,13 @@ namespace Dabomase.ItalianDateTimeUtils
             int day = int.Parse(dateAsString.Substring(0, 2));
             if (day < 1 || day > 31)
             {
-                throw new ArgumentOutOfRangeException($"Day part of given '{nameof(dateAsString)}' is out of allowed range");
+                throw new ArgumentOutOfRangeException(nameof(dateAsString), $"Day part of given '{nameof(dateAsString)}' is out of allowed range");
             }
 
             int month = int.Parse(dateAsString.Substring(2, 2));
             if (month < 1 || month > 12)
             {
-                throw new ArgumentOutOfRangeException($"Month part of given '{nameof(dateAsString)}' is out of allowed range");
+                throw new ArgumentOutOfRangeException(nameof(dateAsString), $"Month part of given '{nameof(dateAsString)}' is out of allowed range");
             }
 
             year = dateAsString.Length > 4 ? int.Parse(dateAsString.Substring(4, 4)) : year;
@@ -68,12 +63,14 @@ namespace Dabomase.ItalianDateTimeUtils
                 throw new ArgumentException($"{nameof(startDate)} cannot be after {nameof(endDate)}");
             }
 
-            List<int> years = new List<int>();
+            var years = new List<int>();
             int startYear = startDate.Year;
 
             while (startYear <= endDate.Year)
+            {
                 years.Add(startYear++);
-
+            }
+            
             return years.ToArray();
         }
 
