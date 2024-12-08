@@ -24,7 +24,7 @@ public sealed class ItalianWorkDaysUtilsTests
         DateTime endDate = DateTime.Parse(endDateString);
 
         // Act
-        int result = ItalianWorkDaysUtils.HowManyItalianOfficeDaysBetweenDates(startDate, endDate);
+        int result = ItalianWorkDaysUtils.HowManyOfficeDaysBetweenDates(startDate, endDate);
 
         // Assert
         Assert.Equal(expectedWorkingDays, result);
@@ -46,7 +46,7 @@ public sealed class ItalianWorkDaysUtilsTests
         DateTime endDate = DateTime.Parse(endDateString);
 
         // Act
-        int result = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.ExcludeWeekendsCondition);
+        int result = ItalianWorkDaysUtils.HowManyWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.ExcludeWeekendsCondition);
 
         // Assert
         Assert.Equal(expectedWorkingDays, result);
@@ -62,7 +62,7 @@ public sealed class ItalianWorkDaysUtilsTests
         DateTime endDate = DateTime.Parse(endDateString);
 
         // Act
-        int result = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.ExcludeSundaysCondition);
+        int result = ItalianWorkDaysUtils.HowManyWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.ExcludeSundaysCondition);
 
         // Assert
         Assert.Equal(expectedWorkingDays, result);
@@ -80,7 +80,7 @@ public sealed class ItalianWorkDaysUtilsTests
             => ItalianWorkDaysUtils.ExcludeWeekendsCondition(date) && ItalianWorkDaysUtils.IncludeOnlyEvenDaysCondition(date);
 
         // Act
-        int result = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, excludeWeekendsAndTakeOnlyEvenDays);
+        int result = ItalianWorkDaysUtils.HowManyWorkDaysBetweenDates(startDate, endDate, excludeWeekendsAndTakeOnlyEvenDays);
 
         // Assert
         Assert.Equal(expectedWorkingDays, result);
@@ -98,7 +98,7 @@ public sealed class ItalianWorkDaysUtilsTests
             => ItalianWorkDaysUtils.ExcludeWeekendsCondition(date) && ItalianWorkDaysUtils.IncludeOnlyOddDaysCondition(date);
 
         // Act
-        int result = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, excludeWeekendsAndTakeOnlyOddDays);
+        int result = ItalianWorkDaysUtils.HowManyWorkDaysBetweenDates(startDate, endDate, excludeWeekendsAndTakeOnlyOddDays);
 
         // Assert
         Assert.Equal(expectedWorkingDays, result);
@@ -117,7 +117,7 @@ public sealed class ItalianWorkDaysUtilsTests
         ItalianHolidaysUtils.LocalHolidayCondition = IncludeJune24AsLocalHoliday;
 
         // Act
-        int result = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.ExcludeWeekendsCondition);
+        int result = ItalianWorkDaysUtils.HowManyWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.ExcludeWeekendsCondition);
 
         // Assert
         Assert.Equal(expectedWorkingDays, result);
@@ -136,6 +136,6 @@ public sealed class ItalianWorkDaysUtilsTests
 
         // Act & Assert
         Assert.Throws<ArgumentException>(() 
-            => ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.ExcludeWeekendsCondition));
+            => ItalianWorkDaysUtils.HowManyWorkDaysBetweenDates(startDate, endDate, ItalianWorkDaysUtils.ExcludeWeekendsCondition));
     }
 }

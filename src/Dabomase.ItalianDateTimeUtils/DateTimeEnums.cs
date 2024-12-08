@@ -35,7 +35,7 @@
     }
 
     /// <summary>
-    /// Enum class encapsulating four month period of year.
+    /// Enum class encapsulating four-month period of year.
     /// </summary>
     public enum FourMonthPeriodOfYear
     {

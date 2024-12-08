@@ -47,8 +47,29 @@ namespace Dabomase.ItalianDateTimeUtils
         /// <returns>The number of Italian office days between two dates.</returns>
         /// <exception cref="ArgumentException">Thrown when provided start date is after given end date.</exception>
         /// <exception cref="ArgumentException">Thrown when one or both of the provided dates' year is before 1946.</exception>
+        /// <remarks>
+        /// This method is obsolete. Use <see cref="HowManyOfficeDaysBetweenDates"/> instead.
+        /// This one is retained for backward compatibility and will be removed in a future version.
+        /// </remarks>
+        [Obsolete("Use '" + nameof(HowManyOfficeDaysBetweenDates) + "' instead. " +
+                  "This method is retained for backward compatibility and will be removed in a future version.")]
         public static int HowManyItalianOfficeDaysBetweenDates(DateTime startDate, DateTime endDate)
-            => HowManyItalianWorkDaysBetweenDates(startDate, endDate, ExcludeWeekendsCondition);
+            => HowManyWorkDaysBetweenDates(startDate, endDate, ExcludeWeekendsCondition);
+        
+        /// <summary>
+        /// Gets the number of Italian office days between two given dates, removing weekends and Italian national and local holidays.
+        /// </summary>
+        /// <remarks>A typical Italian office week goes from Monday to Friday.</remarks>
+        /// <param name="startDate">The start date.</param>
+        /// <param name="endDate">The end date.</param>
+        /// <returns>The number of Italian office days between two dates.</returns>
+        /// <exception cref="ArgumentException">Thrown when provided start date is after given end date.</exception>
+        /// <exception cref="ArgumentException">Thrown when one or both of the provided dates' year is before 1946.</exception>
+        ///  <remarks>
+        /// The updated method that replaces <see cref="HowManyItalianOfficeDaysBetweenDates"/>.
+        /// </remarks>
+        public static int HowManyOfficeDaysBetweenDates(DateTime startDate, DateTime endDate)
+            => HowManyWorkDaysBetweenDates(startDate, endDate, ExcludeWeekendsCondition);
 
         /// <summary>
         /// Gets the number of Italian work days between two given dates, keeping those that match a given condition 
@@ -61,7 +82,30 @@ namespace Dabomase.ItalianDateTimeUtils
         /// <exception cref="ArgumentException">Thrown when: 
         /// - given start date is after given end date;
         /// - or when one or both of the provided dates' year is before 1946.</exception>
+        /// <remarks>
+        /// This method is obsolete. Use <see cref="HowManyWorkDaysBetweenDates"/> instead.
+        /// This one is retained for backward compatibility and will be removed in a future version.
+        /// </remarks>
+        [Obsolete("Use '" + nameof(HowManyWorkDaysBetweenDates) + "' instead. " +
+        "This method is retained for backward compatibility and will be removed in a future version.")]
         public static int HowManyItalianWorkDaysBetweenDates(DateTime startDate, DateTime endDate, Func<DateTime, bool> workDaysCondition)
+            => HowManyWorkDaysBetweenDates(startDate, endDate, workDaysCondition);
+        
+        /// <summary>
+        /// Gets the number of Italian work days between two given dates, keeping those that match a given condition 
+        /// but still removing Italian both national and local holidays.
+        /// </summary>
+        /// <param name="startDate">The start date.</param>
+        /// <param name="endDate">The end date.</param>
+        /// <param name="workDaysCondition">Condition to consider matching dates as work days.</param>
+        /// <returns>The number of Italian calculated work days.</returns>
+        /// <exception cref="ArgumentException">Thrown when: 
+        /// - given start date is after given end date;
+        /// - or when one or both of the provided dates' year is before 1946.</exception>
+        /// <remarks>
+        /// The updated method that replaces <see cref="HowManyItalianWorkDaysBetweenDates"/>.
+        /// </remarks>
+        public static int HowManyWorkDaysBetweenDates(DateTime startDate, DateTime endDate, Func<DateTime, bool> workDaysCondition)
         {
             startDate = startDate.Date;
             endDate = endDate.Date;

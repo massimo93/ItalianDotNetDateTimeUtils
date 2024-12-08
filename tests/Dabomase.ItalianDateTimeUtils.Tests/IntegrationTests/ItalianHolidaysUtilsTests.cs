@@ -81,7 +81,7 @@ public sealed class ItalianHolidaysUtilsTests
         IEnumerable<DateTime> expectedDateTimeList = expectedDates.Select(date => DateTime.Parse(date));
 
         // Act
-        IEnumerable<DateTime> result = ItalianHolidaysUtils.GetYearlyItalianHolidays(year);
+        IEnumerable<DateTime> result = ItalianHolidaysUtils.GetYearlyHolidays(year);
 
         // Assert
         Assert.Equal(expectedDateTimeList, result);
@@ -92,7 +92,7 @@ public sealed class ItalianHolidaysUtilsTests
     public void GetYearlyItalianHolidays_ShouldThrowArgumentException(int year)
     {
         // Act & Assert
-        Assert.Throws<ArgumentException>(() => ItalianHolidaysUtils.GetYearlyItalianHolidays(year));
+        Assert.Throws<ArgumentException>(() => ItalianHolidaysUtils.GetYearlyHolidays(year));
     }
 
     [Theory]
@@ -109,7 +109,7 @@ public sealed class ItalianHolidaysUtilsTests
         IEnumerable<DateTime> expectedDateTimeList = expectedDates.Select(date => DateTime.Parse(date));
 
         // Act
-        IEnumerable<DateTime> result = ItalianHolidaysUtils.GetItalianHolidaysInRange(startDate, endDate);
+        IEnumerable<DateTime> result = ItalianHolidaysUtils.GetHolidaysInRange(startDate, endDate);
 
         // Assert
         Assert.Equal(expectedDateTimeList, result);
@@ -124,7 +124,7 @@ public sealed class ItalianHolidaysUtilsTests
         DateTime endDate = DateTime.Parse(endDateString);
 
         // Act & Assert
-        Assert.Throws<ArgumentException>(() => ItalianHolidaysUtils.GetItalianHolidaysInRange(startDate, endDate));
+        Assert.Throws<ArgumentException>(() => ItalianHolidaysUtils.GetHolidaysInRange(startDate, endDate));
     }
 
     #endregion
