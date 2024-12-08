@@ -5,10 +5,17 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <UseNuGetPackage>false</UseNuGetPackage>
     </PropertyGroup>
 
-    <ItemGroup>
-      <PackageReference Include="Dabomase.ItalianDateTimeUtils" Version="1.0.5" />
+    <ItemGroup Condition="'$(UseNuGetPackage)' == 'true'">
+        <!-- Reference the NuGet package -->
+        <PackageReference Include="Dabomase.ItalianDateTimeUtils" Version="1.1.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(UseNuGetPackage)' != 'true'">
+        <!-- Reference the local project -->
+        <ProjectReference Include="..\..\src\Dabomase.ItalianDateTimeUtils\Dabomase.ItalianDateTimeUtils.csproj" />
     </ItemGroup>
 
 </Project>

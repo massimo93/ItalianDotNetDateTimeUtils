@@ -10,17 +10,17 @@ var isTodayItalianHoliday = ItalianHolidaysUtils.IsHoliday(DateTime.UtcNow);
 var wasLastNovemberTheFirstItalianHoliday = ItalianHolidaysUtils.IsHoliday(new DateTime(2024, 11, 1));
 
 //Get holidays
-var italianHolidaysFor2024 = ItalianHolidaysUtils.GetYearlyItalianHolidays(2024);
-var italianHolidaysInRange = ItalianHolidaysUtils.GetItalianHolidaysInRange(new DateTime(2024, 3, 15), new DateTime(2025, 12, 15));
+var italianHolidaysFor2024 = ItalianHolidaysUtils.GetYearlyHolidays(2024);
+var italianHolidaysInRange = ItalianHolidaysUtils.GetHolidaysInRange(new DateTime(2024, 3, 15), new DateTime(2025, 12, 15));
 
 //Get work days
 var startDate = new DateTime(2024, 7, 16);
 var endDate = new DateTime(2024, 12, 15);
 
-var italianOfficeDaysInRangeCount = ItalianWorkDaysUtils.HowManyItalianOfficeDaysBetweenDates(startDate, endDate);
-var workDaysInRangeExcludingSundaysCount = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, workDaysCondition: ItalianWorkDaysUtils.ExcludeSundaysCondition);
-var evenWorkDaysInRangeCount = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, workDaysCondition: ItalianWorkDaysUtils.IncludeOnlyEvenDaysCondition);
-var allDaysAsWorkingDaysInRangeCount = ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(startDate, endDate, workDaysCondition: date => true);
+var italianOfficeDaysInRangeCount = ItalianWorkDaysUtils.HowManyOfficeDaysBetweenDates(startDate, endDate);
+var workDaysInRangeExcludingSundaysCount = ItalianWorkDaysUtils.HowManyWorkDaysBetweenDates(startDate, endDate, workDaysCondition: ItalianWorkDaysUtils.ExcludeSundaysCondition);
+var evenWorkDaysInRangeCount = ItalianWorkDaysUtils.HowManyWorkDaysBetweenDates(startDate, endDate, workDaysCondition: ItalianWorkDaysUtils.IncludeOnlyEvenDaysCondition);
+var allDaysAsWorkingDaysInRangeCount = ItalianWorkDaysUtils.HowManyWorkDaysBetweenDates(startDate, endDate, workDaysCondition: _ => true);
 
 //Console printouts
 Console.WriteLine($"{nameof(isTodayItalianHoliday)}: {isTodayItalianHoliday}");
