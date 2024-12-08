@@ -10,9 +10,9 @@
 **Declaring Type:** [DateTimeExtensions](../index.md)  
 **Namespace:** [Dabomase.ItalianDateTimeUtils](../../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
-**Assembly Version:** 1.0.3+1400f7f95c6b2cab6e5fca13419c8f5a2f08da4e
+**Assembly Version:** 1.1.0+b743caee059fb5e92ab9d19fe321216fe1d37576
 
-Gets the date of the week end (Monday set as default week start day) of the given date.
+Gets the date of the weekend (Monday set as default week start day) of the given date.
 
 ```csharp
 public static DateTime EndOfWeek(this DateTime dateTime, DayOfWeek startOfWeek = DayOfWeek.Monday);
@@ -32,7 +32,7 @@ The start day of the week, Monday set as default.
 
 DateTime
 
-The date of the week end of the given date.
+The date of the weekend of the given date.
 
 ___
 

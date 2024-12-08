@@ -5,20 +5,17 @@
   </auto-generated>   
 -->
 
-# ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates Method
+# ItalianWorkDaysUtils.HowManyWorkDaysBetweenDates Method
 
 **Declaring Type:** [ItalianWorkDaysUtils](../index.md)  
 **Namespace:** [Dabomase.ItalianDateTimeUtils](../../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
 **Assembly Version:** 1.1.0+b743caee059fb5e92ab9d19fe321216fe1d37576
 
-⚠️ **Warning:** Use 'HowManyWorkDaysBetweenDates' instead. This method is retained for backward compatibility and will be removed in a future version.
-
 Gets the number of Italian work days between two given dates, keeping those that match a given condition  but still removing Italian both national and local holidays.
 
 ```csharp
-[Obsolete("Use 'HowManyWorkDaysBetweenDates' instead. This method is retained for backward compatibility and will be removed in a future version.")]
-public static int HowManyItalianWorkDaysBetweenDates(DateTime startDate, DateTime endDate, Func<DateTime, bool> workDaysCondition);
+public static int HowManyWorkDaysBetweenDates(DateTime startDate, DateTime endDate, Func<DateTime, bool> workDaysCondition);
 ```
 
 ## Parameters
@@ -37,7 +34,7 @@ Condition to consider matching dates as work days.
 
 ## Remarks
 
-This method is obsolete. Use [HowManyWorkDaysBetweenDates(DateTime, DateTime, Func\<DateTime, bool\>)](HowManyWorkDaysBetweenDates.md) instead. This one is retained for backward compatibility and will be removed in a future version.
+The updated method that replaces [HowManyItalianWorkDaysBetweenDates(DateTime, DateTime, Func\<DateTime, bool\>)](HowManyItalianWorkDaysBetweenDates.md).
 
 ## Returns
 

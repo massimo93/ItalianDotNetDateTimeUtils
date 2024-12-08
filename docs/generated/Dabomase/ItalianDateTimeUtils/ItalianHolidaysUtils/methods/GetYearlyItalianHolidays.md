@@ -10,11 +10,14 @@
 **Declaring Type:** [ItalianHolidaysUtils](../index.md)  
 **Namespace:** [Dabomase.ItalianDateTimeUtils](../../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
-**Assembly Version:** 1.0.3+1400f7f95c6b2cab6e5fca13419c8f5a2f08da4e
+**Assembly Version:** 1.1.0+b743caee059fb5e92ab9d19fe321216fe1d37576
+
+⚠️ **Warning:** Use 'GetYearlyHolidays' instead. This method is retained for backward compatibility and will be removed in a future version.
 
 Gets a DateTime list of yearly Italian holidays.
 
 ```csharp
+[Obsolete("Use 'GetYearlyHolidays' instead. This method is retained for backward compatibility and will be removed in a future version.")]
 public static IEnumerable<DateTime> GetYearlyItalianHolidays(int year);
 ```
 
@@ -23,6 +26,10 @@ public static IEnumerable<DateTime> GetYearlyItalianHolidays(int year);
 `year`  int
 
 The given year.
+
+## Remarks
+
+This method is obsolete. Use [GetYearlyHolidays(int)](GetYearlyHolidays.md) instead. This one is retained for backward compatibility and will be removed in a future version.
 
 ## Returns
 

@@ -10,9 +10,9 @@
 **Declaring Type:** [DateTimeExtensions](../index.md)  
 **Namespace:** [Dabomase.ItalianDateTimeUtils](../../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
-**Assembly Version:** 1.0.3+1400f7f95c6b2cab6e5fca13419c8f5a2f08da4e
+**Assembly Version:** 1.1.0+b743caee059fb5e92ab9d19fe321216fe1d37576
 
-Gets an enum representing the first month of the date corresponding four month period.
+Gets an enum representing the first month of the date corresponding four\-month period.
 
 ```csharp
 public static MonthOfYear FirstMonthOfFourMonthPeriodOfYear(this DateTime dateTime);
@@ -28,7 +28,7 @@ The given date.
 
 [MonthOfYear](../../DateTimeEnums/MonthOfYear/index.md)
 
-An enum representing the first month of the date corresponding four month period.
+An enum representing the first month of the date corresponding four\-month period.
 
 ___
 
