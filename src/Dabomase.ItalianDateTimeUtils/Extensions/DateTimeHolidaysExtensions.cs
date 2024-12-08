@@ -87,7 +87,7 @@ namespace Dabomase.ItalianDateTimeUtils
         /// <returns>True if given date is Italian Workers' Day; otherwise, false.</returns>
         /// <remarks>
         /// This method is obsolete. Use <see cref="IsItalianWorkersDay"/> instead.
-        /// It's retained for backward compatibility and will be removed in a future version.
+        /// This one is retained for backward compatibility and will be removed in a future version.
         /// </remarks>
         [Obsolete("Use '" + nameof(IsItalianWorkersDay) + "' instead. " +
                   "This method is retained for backward compatibility and will be removed in a future version.")]

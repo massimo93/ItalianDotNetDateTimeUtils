@@ -4,7 +4,7 @@ using System;
 namespace Dabomase.ItalianDateTimeUtils
 {
     /// <summary>
-    /// Provides extension methods for <see cref="DateTime"/>, supporting equality check, week and weekends, days of months, quarters and four month periods.
+    /// Provides extension methods for <see cref="DateTime"/>, supporting equality check, week and weekends, days of months, quarters and four-month periods.
     /// </summary>
     public static class DateTimeExtensions
     {
@@ -226,7 +226,7 @@ namespace Dabomase.ItalianDateTimeUtils
 
         #endregion
 
-        #region Four Month Period
+        #region Four-Month Period
 
         /// <summary>
         /// Gets the ordinal number of the date corresponding fourth month period.
@@ -268,7 +268,7 @@ namespace Dabomase.ItalianDateTimeUtils
         /// Gets the first day of the date corresponding four mounth period.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
-        /// <returns>A date time representing the first day of the date corresponding four month period.</returns>
+        /// <returns>A date time representing the first day of the date corresponding four-month period.</returns>
         public static DateTime FirstDayOfFourMonthPeriod(this DateTime dateTime)
             => new DateTime(dateTime.Year, dateTime.FirstMonthOfFourMonthPeriod(), 1);
 
@@ -276,15 +276,15 @@ namespace Dabomase.ItalianDateTimeUtils
         /// Gets the last day of the date corresponding four mounth period.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
-        /// <returns>A date time representing the last day of the date corresponding four month period.</returns>
+        /// <returns>A date time representing the last day of the date corresponding four-month period.</returns>
         public static DateTime LastDayOfFourMonthPeriod(this DateTime dateTime)
             => new DateTime(dateTime.Year, dateTime.LastMonthOfFourMonthPeriod(), 1).LastDayOfMonth();
 
         /// <summary>
-        /// Gets the ordinal number of the first month of the date corresponding four month period.
+        /// Gets the ordinal number of the first month of the date corresponding four-month period.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
-        /// <returns>An integer representing the ordinal number of the first month of the date corresponding four month period.</returns>
+        /// <returns>An integer representing the ordinal number of the first month of the date corresponding four-month period.</returns>
         public static int FirstMonthOfFourMonthPeriod(this DateTime dateTime)
         {
             switch (dateTime.FourMonthPeriod())
@@ -299,10 +299,10 @@ namespace Dabomase.ItalianDateTimeUtils
         }
 
         /// <summary>
-        /// Gets an enum representing the first month of the date corresponding four month period.
+        /// Gets an enum representing the first month of the date corresponding four-month period.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
-        /// <returns>An enum representing the first month of the date corresponding four month period.</returns>
+        /// <returns>An enum representing the first month of the date corresponding four-month period.</returns>
         public static MonthOfYear FirstMonthOfFourMonthPeriodOfYear(this DateTime dateTime)
         {
             switch (dateTime.FourMonthPeriodOfYear())
@@ -317,10 +317,10 @@ namespace Dabomase.ItalianDateTimeUtils
         }
 
         /// <summary>
-        /// Gets the ordinal number of the last month of the date corresponding four month period.
+        /// Gets the ordinal number of the last month of the date corresponding four-month period.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
-        /// <returns>An integer representing the ordinal number of the last month of the date corresponding four month period.</returns>
+        /// <returns>An integer representing the ordinal number of the last month of the date corresponding four-month period.</returns>
         public static int LastMonthOfFourMonthPeriod(this DateTime dateTime)
         {
             switch (dateTime.FourMonthPeriod())
@@ -335,10 +335,10 @@ namespace Dabomase.ItalianDateTimeUtils
         }
 
         /// <summary>
-        /// Gets an enum representing the last month of the date corresponding four month period.
+        /// Gets an enum representing the last month of the date corresponding four-month period.
         /// </summary>
         /// <param name="dateTime">The given date.</param>
-        /// <returns>An enum representing the last month of the date corresponding four month period.</returns>
+        /// <returns>An enum representing the last month of the date corresponding four-month period.</returns>
         public static MonthOfYear LastMonthOfFourMonthPeriodOfYear(this DateTime dateTime)
         {
             switch (dateTime.FourMonthPeriodOfYear())
