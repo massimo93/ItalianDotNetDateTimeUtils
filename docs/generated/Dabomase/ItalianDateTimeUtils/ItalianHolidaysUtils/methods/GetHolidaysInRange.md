@@ -5,20 +5,17 @@
   </auto-generated>   
 -->
 
-# ItalianHolidaysUtils.GetItalianHolidaysInRange Method
+# ItalianHolidaysUtils.GetHolidaysInRange Method
 
 **Declaring Type:** [ItalianHolidaysUtils](../index.md)  
 **Namespace:** [Dabomase.ItalianDateTimeUtils](../../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
 **Assembly Version:** 1.1.0+b743caee059fb5e92ab9d19fe321216fe1d37576
 
-⚠️ **Warning:** Use 'GetHolidaysInRange' instead. This method is retained for backward compatibility and will be removed in a future version.
-
 Gets a DateTime list of Italian holidays between given dates.
 
 ```csharp
-[Obsolete("Use 'GetHolidaysInRange' instead. This method is retained for backward compatibility and will be removed in a future version.")]
-public static IEnumerable<DateTime> GetItalianHolidaysInRange(DateTime startDate, DateTime endDate);
+public static IEnumerable<DateTime> GetHolidaysInRange(DateTime startDate, DateTime endDate);
 ```
 
 ## Parameters
@@ -33,7 +30,7 @@ The end date.
 
 ## Remarks
 
-This method is obsolete. Use [GetHolidaysInRange(DateTime, DateTime)](GetHolidaysInRange.md) instead. This one is retained for backward compatibility and will be removed in a future version.
+The updated method that replaces [GetItalianHolidaysInRange(DateTime, DateTime)](GetItalianHolidaysInRange.md).
 
 ## Returns
 

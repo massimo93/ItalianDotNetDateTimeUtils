@@ -9,7 +9,7 @@
 
 **Namespace:** [Dabomase.ItalianDateTimeUtils](../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
-**Assembly Version:** 1.0.3+1400f7f95c6b2cab6e5fca13419c8f5a2f08da4e
+**Assembly Version:** 1.1.0+b743caee059fb5e92ab9d19fe321216fe1d37576
 
 Provides static utility methods when dealing with Italian work days calculations.
 
@@ -35,6 +35,8 @@ public static class ItalianWorkDaysUtils
 | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [HowManyItalianOfficeDaysBetweenDates(DateTime, DateTime)](methods/HowManyItalianOfficeDaysBetweenDates.md)                     | Gets the number of Italian office days between two given dates, removing weekends and Italian national and local holidays.                                             |
 | [HowManyItalianWorkDaysBetweenDates(DateTime, DateTime, Func\<DateTime, bool\>)](methods/HowManyItalianWorkDaysBetweenDates.md) | Gets the number of Italian work days between two given dates, keeping those that match a given condition  but still removing Italian both national and local holidays. |
+| [HowManyOfficeDaysBetweenDates(DateTime, DateTime)](methods/HowManyOfficeDaysBetweenDates.md)                                   | Gets the number of Italian office days between two given dates, removing weekends and Italian national and local holidays.                                             |
+| [HowManyWorkDaysBetweenDates(DateTime, DateTime, Func\<DateTime, bool\>)](methods/HowManyWorkDaysBetweenDates.md)               | Gets the number of Italian work days between two given dates, keeping those that match a given condition  but still removing Italian both national and local holidays. |
 
 ___
 

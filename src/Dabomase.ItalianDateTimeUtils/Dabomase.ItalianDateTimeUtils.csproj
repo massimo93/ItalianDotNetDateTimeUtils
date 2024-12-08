@@ -1,9 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Dabomase.ItalianDateTimeUtils</AssemblyName>
-    <Version>1.0.5</Version>
-    <PackageReleaseNotes>Update license acceptance terms</PackageReleaseNotes>
+    <Version>1.1.0</Version>
+    <PackageReleaseNotes>Improved user's documentation and new names for some existing methods, while keeping backward compatibility.</PackageReleaseNotes>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Description>Simple and pluggable utilities library that aims to help Italian developers or any developer who need support when dealing with Italian holidays and work days calculations.</Description>
     <Authors>Davide Borghi (Dabo) and Massimo Serra (mase)</Authors>
@@ -12,10 +13,13 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Copyright 2024</Copyright>
-    <PackageTags>Italian ItalianCommunity DateTimeUtils ItalianDateTime NetStandard2.0</PackageTags>
+    <PackageTags>Italian ItalianCommunity DateTime DateTimeUtils ItalianDateTime NetStandard2.0 ItalianHolidays ItalianWorkdays</PackageTags>
   </PropertyGroup>
+  
   <ItemGroup>
+    <None Include="..\..\CHANGELOG.md" Pack="true" PackagePath="" />
     <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
     <None Include="..\..\README.md" Pack="true" PackagePath="" />
   </ItemGroup>
+  
 </Project>

@@ -5,20 +5,17 @@
   </auto-generated>   
 -->
 
-# DateTimeHolidaysExtensions.IsWorkersDay Method
+# DateTimeHolidaysExtensions.IsItalianWorkersDay Method
 
 **Declaring Type:** [DateTimeHolidaysExtensions](../index.md)  
 **Namespace:** [Dabomase.ItalianDateTimeUtils](../../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
 **Assembly Version:** 1.1.0+b743caee059fb5e92ab9d19fe321216fe1d37576
 
-⚠️ **Warning:** Use 'IsItalianWorkersDay' instead. This method is retained for backward compatibility and will be removed in a future version.
-
 Tells if given date is Italian Workers' Day: from 1890 this day has been celebrated on May 1st during Late Modern Period, or during City of Rome foundation celebration day (i.e. April 21st, from 1924 to 1944, both included).
 
 ```csharp
-[Obsolete("Use 'IsItalianWorkersDay' instead. This method is retained for backward compatibility and will be removed in a future version.")]
-public static bool IsWorkersDay(this DateTime dateTime);
+public static bool IsItalianWorkersDay(this DateTime dateTime);
 ```
 
 ## Parameters
@@ -29,7 +26,7 @@ The given date.
 
 ## Remarks
 
-This method is obsolete. Use [IsItalianWorkersDay(DateTime)](IsItalianWorkersDay.md) instead. This one is retained for backward compatibility and will be removed in a future version.
+The updated method that replaces [IsWorkersDay(DateTime)](IsWorkersDay.md).
 
 ## Returns
 

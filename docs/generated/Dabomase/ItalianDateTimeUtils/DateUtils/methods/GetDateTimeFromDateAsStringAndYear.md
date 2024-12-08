@@ -10,7 +10,7 @@
 **Declaring Type:** [DateUtils](../index.md)  
 **Namespace:** [Dabomase.ItalianDateTimeUtils](../../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
-**Assembly Version:** 1.0.3+1400f7f95c6b2cab6e5fca13419c8f5a2f08da4e
+**Assembly Version:** 1.1.0+b743caee059fb5e92ab9d19fe321216fe1d37576
 
 Gets the date time from a date formatted as string plus the year as an integer.
 
@@ -38,7 +38,7 @@ The day in DateTime format.
 
 ArgumentOutOfRangeException
 
-Thrown when:              \- provided day or month part of given date as string are not in a valid range;              \- or when given year value is less than System.Int32.MinValue or greater than System.Int32.MaxValue;              \- or when the corresponding DateTime is not valid.
+Thrown when:              \- provided day or month part of given date as string are not in a valid range;              \- or when the corresponding DateTime is not valid.
 
 ArgumentNullException
 

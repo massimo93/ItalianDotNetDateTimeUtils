@@ -15,13 +15,13 @@
 
 ## Classes
 
-| Name                                                              | Description                                                                                                                             |
-| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [DateTimeExtensions](DateTimeExtensions/index.md)                 | Provides extension methods for DateTime, supporting equality check, week and weekends, days of months, quarters and four month periods. |
-| [DateTimeHolidaysExtensions](DateTimeHolidaysExtensions/index.md) | Provides extension methods when working with DateTime objects related to national holidays.                                             |
-| [DateUtils](DateUtils/index.md)                                   | Provides simple static DateTime utility methods.                                                                                        |
-| [ItalianHolidaysUtils](ItalianHolidaysUtils/index.md)             | Provides static utility methods when working with Italian holidays checks.                                                              |
-| [ItalianWorkDaysUtils](ItalianWorkDaysUtils/index.md)             | Provides static utility methods when dealing with Italian work days calculations.                                                       |
+| Name                                                              | Description                                                                                                                              |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| [DateTimeExtensions](DateTimeExtensions/index.md)                 | Provides extension methods for DateTime, supporting equality check, week and weekends, days of months, quarters and four\-month periods. |
+| [DateTimeHolidaysExtensions](DateTimeHolidaysExtensions/index.md) | Provides extension methods when working with DateTime objects related to national holidays.                                              |
+| [DateUtils](DateUtils/index.md)                                   | Provides simple static DateTime utility methods.                                                                                         |
+| [ItalianHolidaysUtils](ItalianHolidaysUtils/index.md)             | Provides static utility methods when working with Italian holidays checks.                                                               |
+| [ItalianWorkDaysUtils](ItalianWorkDaysUtils/index.md)             | Provides static utility methods when dealing with Italian work days calculations.                                                        |
 
 ___
 

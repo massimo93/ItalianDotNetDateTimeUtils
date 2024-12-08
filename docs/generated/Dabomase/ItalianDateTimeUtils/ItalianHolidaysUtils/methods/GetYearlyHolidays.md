@@ -5,40 +5,40 @@
   </auto-generated>   
 -->
 
-# DateUtils.GetYearsBetweenDates Method
+# ItalianHolidaysUtils.GetYearlyHolidays Method
 
-**Declaring Type:** [DateUtils](../index.md)  
+**Declaring Type:** [ItalianHolidaysUtils](../index.md)  
 **Namespace:** [Dabomase.ItalianDateTimeUtils](../../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
 **Assembly Version:** 1.1.0+b743caee059fb5e92ab9d19fe321216fe1d37576
 
-Gets an array of years between two dates.
+Gets a DateTime list of yearly Italian holidays.
 
 ```csharp
-public static int[] GetYearsBetweenDates(DateTime startDate, DateTime endDate);
+public static IEnumerable<DateTime> GetYearlyHolidays(int year);
 ```
 
 ## Parameters
 
-`startDate`  DateTime
+`year`  int
 
-The starting date.
+The given year.
 
-`endDate`  DateTime
+## Remarks
 
-The ending date.
+The updated method that replaces [GetYearlyItalianHolidays(int)](GetYearlyItalianHolidays.md).
 
 ## Returns
 
-int\[\]
+IEnumerable\<DateTime\>
 
-An array of integers containing the years between the two given dates.
+A list of yearly Italian holidays.
 
 ## Exceptions
 
 ArgumentException
 
-Thrown when provided starting date is after given ending date.
+Thrown when provided year is before 1946.
 
 ___
 

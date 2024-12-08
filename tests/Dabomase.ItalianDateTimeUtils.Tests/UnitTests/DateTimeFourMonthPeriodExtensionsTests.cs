@@ -2,7 +2,7 @@
 
 public sealed class DateTimeFourMonthPeriodExtensionsTests
 {
-    #region Four Month Period and Four Month Period of Year
+    #region Four-Month Period and Four-Month Period of Year
 
     [Theory]
     [InlineData("2023/01/01", 1)]
@@ -52,7 +52,7 @@ public sealed class DateTimeFourMonthPeriodExtensionsTests
 
     #endregion
 
-    #region First and last day of Four Month Period
+    #region First and last day of Four-Month Period
 
     [Theory]
     [InlineData("2023/02/16", "2023/01/01")]
@@ -76,7 +76,7 @@ public sealed class DateTimeFourMonthPeriodExtensionsTests
 
     #endregion
 
-    #region First and last month of Four Month Period
+    #region First and last month of Four-Month Period
 
     [Theory]
     [InlineData("2023/02/16", 1)]

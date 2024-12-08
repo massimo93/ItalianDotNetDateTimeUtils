@@ -5,20 +5,17 @@
   </auto-generated>   
 -->
 
-# ItalianWorkDaysUtils.HowManyItalianOfficeDaysBetweenDates Method
+# ItalianWorkDaysUtils.HowManyOfficeDaysBetweenDates Method
 
 **Declaring Type:** [ItalianWorkDaysUtils](../index.md)  
 **Namespace:** [Dabomase.ItalianDateTimeUtils](../../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
 **Assembly Version:** 1.1.0+b743caee059fb5e92ab9d19fe321216fe1d37576
 
-⚠️ **Warning:** Use 'HowManyOfficeDaysBetweenDates' instead. This method is retained for backward compatibility and will be removed in a future version.
-
 Gets the number of Italian office days between two given dates, removing weekends and Italian national and local holidays.
 
 ```csharp
-[Obsolete("Use 'HowManyOfficeDaysBetweenDates' instead. This method is retained for backward compatibility and will be removed in a future version.")]
-public static int HowManyItalianOfficeDaysBetweenDates(DateTime startDate, DateTime endDate);
+public static int HowManyOfficeDaysBetweenDates(DateTime startDate, DateTime endDate);
 ```
 
 ## Parameters
@@ -33,7 +30,7 @@ The end date.
 
 ## Remarks
 
-This method is obsolete. Use [HowManyOfficeDaysBetweenDates(DateTime, DateTime)](HowManyOfficeDaysBetweenDates.md) instead. This one is retained for backward compatibility and will be removed in a future version.
+The updated method that replaces [HowManyItalianOfficeDaysBetweenDates(DateTime, DateTime)](HowManyItalianOfficeDaysBetweenDates.md).
 
 ## Returns
 

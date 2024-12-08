@@ -9,7 +9,7 @@
 
 **Namespace:** [Dabomase.ItalianDateTimeUtils](../index.md)  
 **Assembly:** Dabomase.ItalianDateTimeUtils  
-**Assembly Version:** 1.0.3+1400f7f95c6b2cab6e5fca13419c8f5a2f08da4e
+**Assembly Version:** 1.1.0+b743caee059fb5e92ab9d19fe321216fe1d37576
 
 Provides static utility methods when working with Italian holidays checks.
 
@@ -29,8 +29,10 @@ public static class ItalianHolidaysUtils
 
 | Name                                                                                  | Description                                                                  |
 | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [GetHolidaysInRange(DateTime, DateTime)](methods/GetHolidaysInRange.md)               | Gets a DateTime list of Italian holidays between given dates.                |
 | [GetItalianHolidaysInRange(DateTime, DateTime)](methods/GetItalianHolidaysInRange.md) | Gets a DateTime list of Italian holidays between given dates.                |
 | [GetYearlyEaster(int)](methods/GetYearlyEaster.md)                                    | Gets the DateTime of Easter Sunday given the year.                           |
+| [GetYearlyHolidays(int)](methods/GetYearlyHolidays.md)                                | Gets a DateTime list of yearly Italian holidays.                             |
 | [GetYearlyItalianHolidays(int)](methods/GetYearlyItalianHolidays.md)                  | Gets a DateTime list of yearly Italian holidays.                             |
 | [IsHoliday(DateTime)](methods/IsHoliday.md)                                           | Tells if a particular date is an Italian (national or local) holiday or not. |
 

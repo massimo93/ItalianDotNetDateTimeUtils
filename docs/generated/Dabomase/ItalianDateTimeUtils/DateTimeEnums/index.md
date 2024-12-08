@@ -11,11 +11,11 @@
 
 ## Enums
 
-| Name                                                    | Description                                         |
-| ------------------------------------------------------- | --------------------------------------------------- |
-| [FourMonthPeriodOfYear](FourMonthPeriodOfYear/index.md) | Enum class encapsulating four month period of year. |
-| [MonthOfYear](MonthOfYear/index.md)                     | Enum class representing months.                     |
-| [QuarterOfYear](QuarterOfYear/index.md)                 | Enum class encapsulating quarters of the year.      |
+| Name                                                    | Description                                          |
+| ------------------------------------------------------- | ---------------------------------------------------- |
+| [FourMonthPeriodOfYear](FourMonthPeriodOfYear/index.md) | Enum class encapsulating four\-month period of year. |
+| [MonthOfYear](MonthOfYear/index.md)                     | Enum class representing months.                      |
+| [QuarterOfYear](QuarterOfYear/index.md)                 | Enum class encapsulating quarters of the year.       |
 
 ___
 
