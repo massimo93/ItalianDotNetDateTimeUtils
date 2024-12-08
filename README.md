@@ -9,11 +9,14 @@ He wrote me because he was bored to copy and paste a static class in every proje
 
 Another stubborn developer, [Massimo Serra](https://www.linkedin.com/in/massimo-serra/), also decided to support Davide with my code.
 
-As a humble, simple and pluggable .NET Standard 2.0 utility library, my role is to help Italian developers or any developer who need support when dealing with Italian holidays (both national and customizable local ones) and work days calculations, which sometimes can be really boring!
+As a humble, simple and pluggable .NET Standard 2.0 utility library, my role is to help Italian developers or any developer 
+who need support when dealing with Italian holidays (both national and customizable local ones) and work days calculations, which sometimes can be really boring!
 
-**Even if I have a good set of unit tests, my developers are committed to extend my features and documentation too, so be patient with me, I promise, they're working hard on these things in their spare time!**
+**Even if I have a good set of unit tests, my developers are committed to extend my features and documentation too, 
+so be patient with me, I promise, they're working hard on these things in their spare time!**
 
-For this reason, please, feel free to file comments, open issues and, if you want, even fork my code and open pull requests: only bear in mind to check my open source license to be nice with me.
+For this reason, please, feel free to file comments, open issues and, if you want, even fork my code and open pull requests: 
+only bear in mind to check my open source license to be nice with me.
 
 You can find me on **[NuGet](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils)**!
 
@@ -29,7 +32,7 @@ You should install the latest version [via NuGet](https://www.nuget.org/packages
 
     Install-Package Dabomase.ItalianDateTimeUtils
     
-Or via the .NET Core command line interface:
+or via the .NET Core command line interface:
 
     dotnet add package Dabomase.ItalianDateTimeUtils
 
@@ -53,8 +56,8 @@ or you want me to list all yearly Italian holidays or from a selected `DateTime`
 var startDate = new DateTime(2024, 3, 15);
 var endDate = new DateTime(2025, 12, 15);
 
-var italianHolidaysFor2024 = ItalianHolidaysUtils.GetYearlyItalianHolidays(2024);
-var italianHolidaysInRange = ItalianHolidaysUtils.GetItalianHolidaysInRange(startDate, endDate);
+var italianHolidaysFor2024 = ItalianHolidaysUtils.GetYearlyHolidays(2024);
+var italianHolidaysInRange = ItalianHolidaysUtils.GetHolidaysInRange(startDate, endDate);
 ```
 
 When it comes to work days calculations, I can either calculate the number of office days given two dates:
@@ -63,7 +66,7 @@ var startDate = new DateTime(2024, 7, 16);
 var endDate = new DateTime(2024, 12, 15);
 
 var italianOfficeDaysInRangeCount = 
-    ItalianWorkDaysUtils.HowManyItalianOfficeDaysBetweenDates(startDate, endDate);
+    ItalianWorkDaysUtils.HowManyOfficeDaysBetweenDates(startDate, endDate);
 ```
 or even use `Func` to specify what kind of work days condition you want, either built-in or your own; let me show you:
 ```cs
@@ -71,28 +74,28 @@ var startDate = new DateTime(2024, 7, 16);
 var endDate = new DateTime(2024, 12, 15);
 
 var italianOfficeDaysInRangeCount = 
-    ItalianWorkDaysUtils.HowManyItalianOfficeDaysBetweenDates(startDate, endDate);
+    ItalianWorkDaysUtils.HowManyOfficeDaysBetweenDates(startDate, endDate);
 
 var workDaysInRangeExcludingSundaysCount = 
-    ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(
+    ItalianWorkDaysUtils.HowManyWorkDaysBetweenDates(
         startDate, endDate, 
         workDaysCondition: ItalianWorkDaysUtils.ExcludeSundaysCondition);
 
 var evenWorkDaysInRangeCount = 
-    ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(
+    ItalianWorkDaysUtils.HowManyWorkDaysBetweenDates(
         startDate, endDate, 
         workDaysCondition: ItalianWorkDaysUtils.IncludeOnlyEvenDaysCondition);
 
 var allDaysAsWorkingDaysInRangeCount = 
-    ItalianWorkDaysUtils.HowManyItalianWorkDaysBetweenDates(
+    ItalianWorkDaysUtils.HowManyWorkDaysBetweenDates(
         startDate, endDate, 
-        workDaysCondition: date => true);
+        workDaysCondition: _ => true);
 ```
 
 ### Full user documentation
 You can find generated markdown files documenting the available APIs [here](https://github.com/massimo93/dabomase-italian-datetime-utils/blob/develop/docs/generated/Dabomase/ItalianDateTimeUtils/index.md) to foresee more advanced use cases and utilities.
 
-Keep also in mind to regularly check my [GitHub repo](https://github.com/massimo93/dabomase-italian-datetime-utils) to see if me developers either packed a new release version or added new use case samples.
+Keep also in mind to regularly check my [GitHub repo](https://github.com/massimo93/dabomase-italian-datetime-utils) to see if my developers either packed a new release version or added new use case samples.
 
 Feel free to take a look at the tests project to further explore what I can do for you with real world data sets.
 
