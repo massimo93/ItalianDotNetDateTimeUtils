@@ -5,7 +5,7 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <UseNuGetPackage>false</UseNuGetPackage>
+        <UseNuGetPackage>true</UseNuGetPackage>
     </PropertyGroup>
 
     <ItemGroup Condition="'$(UseNuGetPackage)' == 'true'">
