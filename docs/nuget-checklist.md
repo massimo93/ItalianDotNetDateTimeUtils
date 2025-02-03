@@ -9,7 +9,7 @@ The following checklist content has been suggested by reading this [blog post](h
 1. Update **Dabomase.ItalianDateTimeUtils.csproj** providing:
     - Version number update (e.g.: <Version>2.0.0</Version>);
     - Package release notes (e.g.: <PackageReleaseNotes>Fix #120 and #121 issues.<PackageReleaseNotes>);
-    - Update Copyright, if relevant (e.g.: <copyright>Copyright 2024</copyright>).
+    - Update Copyright, if relevant (e.g.: <Copyright>Copyright 2024</Copyright>).
 
 2. Create a package locally by navigating to _src/Dabomase.ItalianDateTimeUtils_ directory and by runnning the following command:
 

@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <UseNuGetPackage>true</UseNuGetPackage>
@@ -10,7 +10,7 @@
 
     <ItemGroup Condition="'$(UseNuGetPackage)' == 'true'">
         <!-- Reference the NuGet package -->
-        <PackageReference Include="Dabomase.ItalianDateTimeUtils" Version="1.1.0" />
+        <PackageReference Include="Dabomase.ItalianDateTimeUtils" Version="1.1.1" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(UseNuGetPackage)' != 'true'">
