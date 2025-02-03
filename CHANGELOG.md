@@ -1,21 +1,27 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [1.1.0](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils/1.1.0) - 2024-12-8
+## [1.1.1](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils/1.1.1) - 2025-02-03
+Authors' Copyright update for 2025.
+
+### Changed
+- Update package's authors list and new year Copyright.
+
+## [1.1.0](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils/1.1.0) - 2024-12-08
 Improved user's documentation and new names for some existing methods, while keeping backward compatibility.
 
 ### Added
-- Improve user's documentation.
-- New code usage samples in README.md.
+- Improve user's documentation
+- New code usage samples in README.md
 - New console application to provide users some relevant code samples and real world usages as part of the GitHub repository.
 
 ### Changed
 #### A first draft of some methods' new names to reduce their verbosity:
 
-- `IsItalianWorkersDay()` method will start replacing `IsWorkersDay()`;
-- `GetYearlyHolidays()` method will start replacing `GetYearlyItalianHolidays()`;
-- `GetHolidaysInRange()` method will start replacing `GetItalianHolidaysInRange()`;
-- `HowManyOfficeDaysBetweenDates()` method will start replacing `HowManyItalianOfficeDaysBetweenDates()`;
+- `IsItalianWorkersDay()` method will start replacing `IsWorkersDay()`
+- `GetYearlyHolidays()` method will start replacing `GetYearlyItalianHolidays()`
+- `GetHolidaysInRange()` method will start replacing `GetItalianHolidaysInRange()`
+- `HowManyOfficeDaysBetweenDates()` method will start replacing `HowManyItalianOfficeDaysBetweenDates()`
 - `HowManyWorkDaysBetweenDates()` method will start replacing `HowManyItalianWorkDaysBetweenDates()`.
 
 ## [1.0.5](https://www.nuget.org/packages/Dabomase.ItalianDateTimeUtils/1.0.5) - 2024-11-30
